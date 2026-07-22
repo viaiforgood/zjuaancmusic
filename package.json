@@ -1,0 +1,19 @@
+{
+  "name": "zjuaaca",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.4.7",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "wrangler": "^4.104.0"
+  }
+}

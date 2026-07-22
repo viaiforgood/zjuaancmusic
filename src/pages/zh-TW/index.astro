@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout lang="zh-TW" title="首屆北美華人AI音樂創作創意大賽 2026–2027" description="慶祝浙江大學130週年華誕暨北卡浙大校友會成立15週年，由美東姊妹校友會、北美高校聯盟等多家機構共同主辦的北美華人AI音樂大賽。" path="/">
+  <div class="max-w-4xl mx-auto px-6 space-y-12">
+    <!-- Hero -->
+    <header class="text-center py-10 space-y-4">
+      <div class="inline-flex items-center gap-x-2 bg-blue-950/40 text-blue-400 px-4 py-1.5 rounded-full text-xs font-semibold border border-blue-900/30">
+        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></span>
+        <span>慶祝浙江大學130週年華誕 暨 北卡浙大校友會成立15週年</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight mt-2">
+        首屆北美華人AI音樂<br><span class="ai-gradient">創作創意大賽</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-slate-400 text-base md:text-lg leading-relaxed">
+        響應母校「邀请你写一首歌，送给130岁的浙大！」號召，歡迎全北美浙大人、親友及華人朋友參與，以AI為輔助創作音樂作品。
+      </p>
+      <div class="pt-4 flex justify-center gap-4">
+        <a href="https://forms.gle/placeholder" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105">
+          立即報名
+        </a>
+        <a href="#details" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold transition-all hover:scale-105">
+          賽事詳情
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Image Banner -->
+    <div class="relative w-full h-56 md:h-80 rounded-3xl overflow-hidden border border-slate-900 shadow-2xl bg-slate-900 flex items-center justify-center group">
+      <img src="/images/hero.jpg" alt="AI Music Banner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent"></div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="details" class="grid md:grid-cols-3 gap-8 pt-6">
+      
+      <!-- Left Column: Details -->
+      <div class="md:col-span-2 space-y-10">
+        
+        <!-- 大賽宗旨 -->
+        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-x-3">
+            <i class="fa-solid fa-bullseye text-blue-400"></i>
+            <span>大賽宗旨</span>
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            為慶祝母校浙江大學130週年華誕暨北卡浙大校友會成立15週年，由<strong>北卡浙大校友會</strong>聯合田納西浙大校友會、費城浙大校友會、羅德島浙大校友會、佛羅里達州校友會等美東姊妹校友會，以及北美高校聯盟多個分會、AI創業公益俱樂部等機構，共同主辦本屆大賽。旨在用前沿的AI技術輔助藝術創作，歌頌母校，聯結全球求是情。
+          </p>
+        </section>
+
+        <!-- 大賽架構 -->
+        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-x-3">
+            <i class="fa-solid fa-sitemap text-blue-400"></i>
+            <span>大賽架構</span>
+          </h2>
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="bg-blue-950/20 border border-blue-900/20 p-4 rounded-2xl text-center">
+              <div class="text-blue-400 font-extrabold text-lg">初賽階段</div>
+              <div class="text-xs text-slate-400 mt-2">全美八個分賽區（北卡、華府、田納西、佛州、賓州、德州、加州、華州）平行海選</div>
+            </div>
+            <div class="bg-blue-950/20 border border-blue-900/20 p-4 rounded-2xl text-center">
+              <div class="text-blue-400 font-extrabold text-lg">聯盟複賽</div>
+              <div class="text-xs text-slate-400 mt-2">東部聯盟 vs 西部聯盟<br>強強對決，角逐總決賽名額</div>
+            </div>
+            <div class="bg-blue-950/20 border border-blue-900/20 p-4 rounded-2xl text-center">
+              <div class="text-blue-400 font-extrabold text-lg">總決賽</div>
+              <div class="text-xs text-slate-400 mt-2">東西聯盟晉級作品終極角逐，爭奪前三名豐厚大獎</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 參賽類別 -->
+        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-x-3">
+            <i class="fa-solid fa-music text-blue-400"></i>
+            <span>參賽類別 (八大創作方向)</span>
+          </h2>
+          <p class="text-xs text-slate-400">大賽鼓勵使用AI輔助工具（如Suno, Udio, ChatGPT等）進行跨類別融合創作：</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">詩詞創作</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">歌詞創作</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">曲譜作曲</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">編曲製作</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">人聲演唱</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">清唱 / A Cappella</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">器樂演奏</div>
+            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">音樂視頻 / MV</div>
+          </div>
+        </section>
+
+        <!-- 征集赞助商与合办机构 -->
+        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-x-3">
+            <i class="fa-solid fa-handshake-angle text-blue-400"></i>
+            <span>招商贊助與合作共辦</span>
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            大賽誠邀北美各界企業、機構、校友及熱心人士贊助支持！<strong>所有贊助資金均可由美國 501(c)(3) 免稅公益組織（VI AI Foundation / 北卡浙大校友會）開具官方免稅收據。</strong>
+          </p>
+          <div class="space-y-4">
+            <div class="border-l-4 border-yellow-500 pl-4 space-y-1">
+              <div class="text-sm font-bold text-yellow-500">💎 鑽石贊助商 ($5,000 以上)</div>
+              <p class="text-xs text-slate-400">享最高級別曝光、總決賽冠名權、海報LOGO主視覺、致謝視頻、官網頭條展示等全套特權。</p>
+            </div>
+            <div class="border-l-4 border-slate-300 pl-4 space-y-1">
+              <div class="text-sm font-bold text-slate-300">⚪ 白金贊助商 ($3,000 – $4,999)</div>
+              <p class="text-xs text-slate-400">享複賽或決賽分項冠名、官網顯著LOGO呈現、宣傳物料重點呈現及培訓講座冠名權。</p>
+            </div>
+            <div class="border-l-4 border-yellow-600 pl-4 space-y-1">
+              <div class="text-sm font-bold text-yellow-600">🟡 黃金贊助商 ($1,500 – $2,999)</div>
+              <p class="text-xs text-slate-400">享賽區冠名、官網及海報LOGO位置、獲獎證書致謝以及社交媒體多輪曝光。</p>
+            </div>
+            <div class="border-l-4 border-blue-400 pl-4 space-y-1">
+              <div class="text-sm font-bold text-blue-400">⚪ 白銀贊助商 ($800 – $1,499)</div>
+              <p class="text-xs text-slate-400">享官網及海報LOGO展示、宣傳物料提及、獲獎名單致謝。</p>
+            </div>
+            <div class="border-l-4 border-amber-700 pl-4 space-y-1">
+              <div class="text-sm font-bold text-amber-700">🟤 銅級贊助商 ($300 – $799)</div>
+              <p class="text-xs text-slate-400">享官網及感謝名單列名、社交媒體致謝鳴謝。</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 border-t border-slate-900 pt-4">
+            🤝 <strong>特別貢獻單位</strong>：接受實物或服務贊助（獎品、場地、技術支持等），根據貢獻折算提供相應贊助權益。歡迎校友會、社團及企業共同主辦或協辦，可協商定制權能。
+          </p>
+        </section>
+
+      </div>
+
+      <!-- Right Column: Timeline & Contact -->
+      <div class="space-y-6">
+        
+        <!-- 重要时间节点 -->
+        <div class="bg-slate-900/30 border border-slate-900 rounded-3xl p-6 space-y-6 shadow-xl">
+          <h3 class="text-lg font-bold text-white flex items-center gap-x-2">
+            <i class="fa-solid fa-calendar-days text-blue-500"></i>
+            <span>大賽時間表</span>
+          </h3>
+          <div class="space-y-4 text-xs">
+            <div class="relative pl-6 border-l border-slate-800 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <div class="font-bold text-white">2026年8月28日</div>
+              <div class="text-slate-400 mt-0.5">報名與初賽作品提交截止（夜裡EDT）</div>
+            </div>
+            <div class="relative pl-6 border-l border-slate-800 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <div class="font-bold text-white">2026年9月26–28日</div>
+              <div class="text-slate-400 mt-0.5">八大賽區初賽海選結果揭曉</div>
+            </div>
+            <div class="relative pl-6 border-l border-slate-800 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <div class="font-bold text-white">2026年9月30日</div>
+              <div class="text-slate-400 mt-0.5">推薦優秀作品參與浙江大學校慶活動</div>
+            </div>
+            <div class="relative pl-6 border-l border-slate-800 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <div class="font-bold text-white">2026年12月12日</div>
+              <div class="text-slate-400 mt-0.5">東西聯盟複賽對決</div>
+            </div>
+            <div class="relative pl-6 pb-1">
+              <span class="absolute left-[-4px] top-[4px] w-2 h-2 rounded-full bg-yellow-500"></span>
+              <div class="font-bold text-white">2027年2月27日</div>
+              <div class="text-slate-400 mt-0.5">全球總決賽終極對決</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="bg-slate-900/30 border border-slate-900 rounded-3xl p-6 space-y-4 shadow-xl">
+          <h3 class="text-lg font-bold text-white flex items-center gap-x-2">
+            <i class="fa-solid fa-address-card text-blue-500"></i>
+            <span>大賽組委會聯繫</span>
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            歡迎贊助意向、共同承辦及參賽諮詢與我們取得聯繫：
+          </p>
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center gap-2 text-slate-300">
+              <i class="fa-brands fa-weixin text-blue-400 w-4"></i>
+              <span>微信: michaelhuo</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <i class="fa-regular fa-envelope text-blue-400 w-4"></i>
+              <a href="mailto:michael@vi.team" class="hover:underline">michael@vi.team</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 附录链接 -->
+        <div class="bg-slate-900/30 border border-slate-900 rounded-3xl p-6 space-y-3 shadow-xl">
+          <h3 class="text-sm font-bold text-white">🔗 相關連結</h3>
+          <p class="text-[11px] text-slate-500">母校活動通知：《邀请你写一首歌，送给130岁的浙大！》</p>
+          <a href="https://m.thepaper.cn/newsDetail_forward_33388625" target="_blank" class="text-xs text-blue-400 hover:underline flex items-center gap-1">
+            <span>瀏覽活動詳情</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</BaseLayout>

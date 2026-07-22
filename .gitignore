@@ -1,0 +1,13 @@
+# Astro build output
+dist/
+.astro/
+
+# Dependency directories
+node_modules/
+
+# Cloudflare Pages / Wrangler cache
+.wrangler/
+.pages.yml
+
+# OS files
+.DS_Store

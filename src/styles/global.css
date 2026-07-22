@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f8f5ee;
+  color: #1a2533;
+}
+
+.ai-gradient {
+  background: linear-gradient(135deg, #1a3a5f 0%, #b89355 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
