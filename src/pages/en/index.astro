@@ -19,10 +19,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p class="max-w-2xl mx-auto text-slate-400 text-base md:text-lg leading-relaxed">
         Open to all Chinese living in North America with no university affiliation required. Create your musical stories with AI!
       </p>
-      <div class="pt-4 flex justify-center gap-4">
+      <div class="pt-4 flex flex-wrap justify-center gap-3 md:gap-4">
         <a href="/en/register" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105 flex items-center gap-2">
           <i class="fa-solid fa-pen-to-square"></i>
           <span>Online Registration Form</span>
+        </a>
+        <a href="https://luma.com/p9v0rz16" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold transition-all shadow-lg hover:scale-105 flex items-center gap-2">
+          <i class="fa-solid fa-video text-purple-200"></i>
+          <span>8/28 Luma Kickoff (Zoom)</span>
         </a>
         <a href="#details" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold transition-all hover:scale-105">
           Details
@@ -238,6 +242,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <!-- Right Column: Timeline & Contact -->
       <div class="space-y-6">
 
+        <!-- Luma Virtual Kickoff -->
+        <div class="bg-gradient-to-br from-purple-950/40 via-slate-900/60 to-blue-950/40 border border-purple-800/40 rounded-3xl p-6 space-y-4 shadow-xl text-center backdrop-blur-sm relative overflow-hidden group">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold">
+            <i class="fa-solid fa-video text-purple-400"></i>
+            <span>8/28 Virtual Kickoff & Q&A</span>
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="text-base font-bold text-slate-100">
+              Contest Overview & AI Workshop
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              August 28, 2026 (Friday) 1:00–2:00 PM PDT<br>
+              <span class="text-slate-400">(4:00–5:00 PM EDT)</span>
+            </p>
+          </div>
+          <a href="https://luma.com/p9v0rz16" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02] flex items-center justify-center gap-2">
+            <span>Register Free on Luma</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
         <!-- WeChat QR -->
         <div id="register" class="bg-blue-950/30 border border-blue-900/40 rounded-3xl p-6 space-y-4 shadow-xl text-center backdrop-blur-sm">
           <h3 class="text-base font-bold text-slate-100 flex items-center justify-center gap-x-2">
@@ -269,7 +294,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <div class="relative pl-6 border-l border-amber-500/40 pb-2">
               <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-400/50"></span>
               <div class="font-bold text-amber-300">August 28, 2026 (Friday)</div>
-              <div class="text-slate-300 mt-0.5">ZJU 130th Anniversary Alma Mater Special Award Submission Deadline</div>
+              <div class="text-slate-300 mt-0.5 space-y-1">
+                <div>• 1:00–2:00 PM PDT: <a href="https://luma.com/p9v0rz16" target="_blank" class="text-purple-300 underline underline-offset-2 hover:text-purple-200">Luma Virtual Kickoff (Zoom)</a></div>
+                <div>• Midnight EDT: ZJU 130th Alma Mater Special Award Submission Deadline</div>
+              </div>
             </div>
             <div class="relative pl-6 border-l border-blue-500/40 pb-2">
               <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500 shadow-sm shadow-blue-500/50"></span>

@@ -19,10 +19,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="max-w-2xl mx-auto text-slate-400 text-base md:text-lg leading-relaxed">
         面向全北美华人开放，不限校友身份。欢迎以AI为辅助，创作属于我们的音乐故事。
       </p>
-      <div class="pt-4 flex justify-center gap-4">
+      <div class="pt-4 flex flex-wrap justify-center gap-3 md:gap-4">
         <a href="/register" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105 flex items-center gap-2">
           <i class="fa-solid fa-pen-to-square"></i>
           <span>在线报名表 / Register Now</span>
+        </a>
+        <a href="https://luma.com/p9v0rz16" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold transition-all shadow-lg hover:scale-105 flex items-center gap-2">
+          <i class="fa-solid fa-video text-purple-200"></i>
+          <span>8/28 Luma 线上交流会</span>
         </a>
         <a href="#details" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold transition-all hover:scale-105">
           赛事详情
@@ -238,6 +242,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Right Column: Timeline & Contact -->
       <div class="space-y-6">
 
+        <!-- Luma 线上交流会 -->
+        <div class="bg-gradient-to-br from-purple-950/40 via-slate-900/60 to-blue-950/40 border border-purple-800/40 rounded-3xl p-6 space-y-4 shadow-xl text-center backdrop-blur-sm relative overflow-hidden group">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold">
+            <i class="fa-solid fa-video text-purple-400"></i>
+            <span>8/28 线上启动交流会</span>
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="text-base font-bold text-slate-100">
+              大赛说明 & AI 创作交流
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              8月28日（周五）1:00–2:00 PM PDT<br>
+              <span class="text-slate-400">（美东时间 4:00–5:00 PM EDT）</span>
+            </p>
+          </div>
+          <a href="https://luma.com/p9v0rz16" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02] flex items-center justify-center gap-2">
+            <span>前往 Luma 免费报名</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
+
         <!-- 扫码报名 -->
         <div id="register" class="bg-blue-950/30 border border-blue-900/40 rounded-3xl p-6 space-y-4 shadow-xl text-center backdrop-blur-sm">
           <h3 class="text-base font-bold text-slate-100 flex items-center justify-center gap-x-2">
@@ -269,7 +294,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="relative pl-6 border-l border-amber-500/40 pb-2">
               <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-400/50"></span>
               <div class="font-bold text-amber-300">2026年8月28日（周五）</div>
-              <div class="text-slate-300 mt-0.5">浙大130周年校庆主题特别投稿截止（推荐母校专属通道）</div>
+              <div class="text-slate-300 mt-0.5 space-y-1">
+                <div>• 1:00–2:00 PM PDT：<a href="https://luma.com/p9v0rz16" target="_blank" class="text-purple-300 underline underline-offset-2 hover:text-purple-200">Luma 线上交流会 (Zoom)</a></div>
+                <div>• 夜里 EDT：浙大130周年校庆主题特别投稿截止</div>
+              </div>
             </div>
             <div class="relative pl-6 border-l border-blue-500/40 pb-2">
               <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500 shadow-sm shadow-blue-500/50"></span>
