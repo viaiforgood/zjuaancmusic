@@ -47,9 +47,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="md:col-span-2 space-y-10">
         
         <!-- 大賽宗旨 -->
-        <section class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-blue-950/30 border border-slate-800/80 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
           <div class="flex items-center gap-x-3">
-            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0">
               <i class="fa-solid fa-bullseye text-lg"></i>
             </div>
             <h2 class="text-2xl font-bold text-slate-100">
@@ -57,20 +57,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </h2>
           </div>
           <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
-            本大賽由 <strong class="text-white font-semibold underline decoration-blue-500/50 underline-offset-4">北卡浙大校友會 (ZJUAA NC)</strong> 與 <strong class="text-white font-semibold underline decoration-blue-500/50 underline-offset-4">北加高校聯盟 (NACUAANC)</strong> 共同主辦，聯合多個美東浙大校友會，以及北美高校聯盟北加州、矽谷、南加州分會等機構共同支持。
+            本大賽由 <span class="inline-flex items-center px-2.5 py-0.5 rounded-lg bg-blue-950/90 border border-blue-500/50 text-blue-300 font-bold shadow-sm">北卡浙大校友會 (ZJUAA NC)</span> 與 <span class="inline-flex items-center px-2.5 py-0.5 rounded-lg bg-indigo-950/90 border border-indigo-500/50 text-indigo-300 font-bold shadow-sm">北加高校聯盟 (NACUAANC)</span> 共同主辦，聯合多個美東浙大校友會，以及北美高校聯盟北加州、矽谷、南加州分會等機構共同支持。
           </p>
           <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
-            這是<strong class="text-blue-300 font-semibold">首屆專為北美華人打造的AI音樂創作創意大賽</strong>。我們熱忱歡迎所有居住在北美的華人、華裔、新移民、留學生及其親友參與，<span class="text-amber-200 font-medium">不限是否為浙江大學校友</span>。
+            這是<span class="text-sky-400 font-bold">首屆專為北美華人打造的AI音樂創作創意大賽</span>。我們熱忱歡迎所有居住在北美的華人、華裔、新移民、留學生及其親友參與，<span class="inline-block px-2 py-0.5 rounded-md bg-amber-950/70 border border-amber-500/50 text-amber-300 font-semibold">不限是否為浙江大學校友</span>。
           </p>
           <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
-            大賽鼓勵創作者以AI為創作夥伴，表達華人在北美的故事、情感、文化融合與創新精神。同時設立<span class="text-amber-300 font-semibold">「母校主題特別獎」</span>，鼓勵創作獻給浙江大學130週年的作品。
+            大賽鼓勵創作者以AI為創作夥伴，表達華人在北美的故事、情感、文化融合與創新精神。同時設立<span class="text-amber-300 font-bold">「母校主題特別獎」</span>，鼓勵創作獻給浙江大學130週年的作品。
           </p>
         </section>
 
         <!-- 參賽資格 -->
-        <section class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-indigo-950/30 border border-slate-800/80 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
           <div class="flex items-center gap-x-3">
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shrink-0">
               <i class="fa-solid fa-id-card text-lg"></i>
             </div>
             <h2 class="text-2xl font-bold text-slate-100">
@@ -78,15 +78,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </h2>
           </div>
           <div class="grid gap-3 pt-1">
-            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-slate-100 text-sm font-medium">
               <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
               <span>居住在北美的華人、華裔、新移民、留學生及其親友</span>
             </div>
-            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-slate-100 text-sm font-medium">
               <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
               <span>不限年齡、不限是否為浙大校友（面向全北美華人開放）</span>
             </div>
-            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-slate-100 text-sm font-medium">
               <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
               <span>個人獨立參賽 或 團隊協同創作參賽均可</span>
             </div>
@@ -94,144 +94,164 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </section>
 
         <!-- 大賽架構 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-sitemap text-blue-400"></i>
-            <span>大賽架構 (三個階段 · 八個賽區)</span>
-          </h2>
-          <div class="grid sm:grid-cols-3 gap-4">
-            <div class="bg-blue-950/20 border border-blue-900/20 p-4 rounded-2xl text-center">
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0">
+              <i class="fa-solid fa-sitemap text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              大賽架構 (三個階段 · 八個賽區)
+            </h2>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-4 pt-1">
+            <div class="bg-slate-950/80 border border-blue-900/40 p-4 rounded-2xl text-center space-y-2">
               <div class="text-blue-400 font-extrabold text-lg">初賽階段</div>
-              <div class="text-xs text-slate-400 mt-2">全美八個分賽區（<a href="https://nc.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">北卡</a>、<a href="https://dc.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">華府</a>、<a href="https://tn.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">田納西</a>、<a href="https://fl.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">佛州</a>、<a href="https://pa.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">賓州</a>、<a href="https://tx.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">德州</a>、<a href="https://ca.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">加州</a>、<a href="https://wa.zjuaanc.org" target="_blank" class="text-blue-400 hover:underline">華州</a>）平行海選</div>
+              <div class="text-xs text-slate-300 leading-relaxed">全美八個分賽區（<a href="https://nc.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">北卡</a>、<a href="https://dc.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">華府</a>、<a href="https://tn.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">田納西</a>、<a href="https://fl.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">佛州</a>、<a href="https://pa.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">賓州</a>、<a href="https://tx.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">德州</a>、<a href="https://ca.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">加州</a>、<a href="https://wa.zjuaanc.org" target="_blank" class="text-blue-400 font-semibold hover:underline">華州</a>）平行海選</div>
             </div>
-            <div class="bg-blue-950/20 border border-blue-900/20 p-4 rounded-2xl text-center">
+            <div class="bg-slate-950/80 border border-blue-900/40 p-4 rounded-2xl text-center space-y-2">
               <div class="text-blue-400 font-extrabold text-lg">聯盟複賽</div>
-              <div class="text-xs text-slate-400 mt-2">東部聯盟 vs 西部聯盟<br>強強對決，角逐總決賽名額</div>
+              <div class="text-xs text-slate-300 leading-relaxed">東部聯盟 vs 西部聯盟<br>強強對決，角逐總決賽名額</div>
             </div>
-            <div class="bg-blue-950/20 border border-blue-900/20 p-4 rounded-2xl text-center">
+            <div class="bg-slate-950/80 border border-blue-900/40 p-4 rounded-2xl text-center space-y-2">
               <div class="text-blue-400 font-extrabold text-lg">總決賽</div>
-              <div class="text-xs text-slate-400 mt-2">東西聯盟晉級作品終極角逐，爭奪前三名豐厚大獎</div>
+              <div class="text-xs text-slate-300 leading-relaxed">東西聯盟晉級作品終極角逐，爭奪前三名豐厚大獎</div>
             </div>
           </div>
         </section>
 
         <!-- 參賽類別 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-music text-blue-400"></i>
-            <span>參賽類別 (八大創作方向)</span>
-          </h2>
-          <p class="text-xs text-slate-400">大賽共設八大創作類別，鼓勵跨類別融合AI創作（如Suno, Udio, ChatGPT等）：</p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">詩詞創作</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">歌詞創作</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">曲譜作曲</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">編曲製作</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">人聲演唱</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">清唱 / A Cappella</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">器樂演奏</div>
-            <div class="bg-slate-900/40 p-3 rounded-xl border border-slate-800 text-sm font-semibold text-slate-200">音樂視頻 / MV 製作</div>
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 shrink-0">
+              <i class="fa-solid fa-music text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              參賽類別 (八大創作方向)
+            </h2>
+          </div>
+          <p class="text-xs text-slate-300">大賽共設八大創作類別，鼓勵跨類別融合AI創作（如Suno, Udio, ChatGPT等）：</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-1">
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">詩詞創作</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">歌詞創作</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">曲譜作曲</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">編曲製作</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">人聲演唱</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">清唱 / A Cappella</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">器樂演奏</div>
+            <div class="bg-slate-950/80 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">音樂視頻 / MV 製作</div>
           </div>
         </section>
 
         <!-- 特別獎項 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-trophy text-blue-400"></i>
-            <span>特別獎項設置 / Special Awards</span>
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800 space-y-1">
-              <div class="text-sm font-bold text-yellow-400">🎓 母校主題特別獎</div>
-              <p class="text-xs text-slate-400">獻給浙江大學130週年的特別創作與致敬作品。</p>
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0">
+              <i class="fa-solid fa-trophy text-lg"></i>
             </div>
-            <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800 space-y-1">
-              <div class="text-sm font-bold text-blue-400">📖 最佳華人故事獎</div>
-              <p class="text-xs text-slate-400">真實深刻表達華人在北美的生活、情感與奮鬥故事。</p>
+            <h2 class="text-2xl font-bold text-slate-100">
+              特別獎項設置 / Special Awards
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1.5 shadow-sm">
+              <div class="text-sm font-bold text-amber-300 flex items-center gap-1.5">🎓 <span>母校主題特別獎</span></div>
+              <p class="text-xs text-slate-300 leading-relaxed">獻給浙江大學130週年的特別創作與致敬作品。</p>
             </div>
-            <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800 space-y-1">
-              <div class="text-sm font-bold text-purple-400">🌐 最佳東西方融合獎</div>
-              <p class="text-xs text-slate-400">巧妙融合東西方音樂元素與跨文化美學特點。</p>
+            <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1.5 shadow-sm">
+              <div class="text-sm font-bold text-blue-300 flex items-center gap-1.5">📖 <span>最佳華人故事獎</span></div>
+              <p class="text-xs text-slate-300 leading-relaxed">真實深刻表達華人在北美的生活、情感與奮鬥故事。</p>
             </div>
-            <div class="bg-slate-900/40 p-4 rounded-2xl border border-slate-800 space-y-1">
-              <div class="text-sm font-bold text-emerald-400">⚡ 最佳AI創意應用獎</div>
-              <p class="text-xs text-slate-400">展示卓越的前沿AI技術融合與前瞻性藝術表現力。</p>
+            <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1.5 shadow-sm">
+              <div class="text-sm font-bold text-purple-300 flex items-center gap-1.5">🌐 <span>最佳東西方融合獎</span></div>
+              <p class="text-xs text-slate-300 leading-relaxed">巧妙融合東西方音樂元素與跨文化美學特點。</p>
+            </div>
+            <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1.5 shadow-sm">
+              <div class="text-sm font-bold text-emerald-300 flex items-center gap-1.5">⚡ <span>最佳AI創意應用獎</span></div>
+              <p class="text-xs text-slate-300 leading-relaxed">展示卓越的前沿AI技術融合與前瞻性藝術表現力。</p>
             </div>
           </div>
         </section>
 
         <!-- 徵集贊助商與合辦機構 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-handshake-angle text-blue-400"></i>
-            <span>徵集贊助商與合辦機構 / Call for Sponsors & Partners</span>
-          </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            本大賽誠邀北美各界企業、機構、校友及熱心人士以贊助商或合辦/協辦單位身份參與支持！<strong>所有贊助費用均可開具美國 501(c)(3) 非營利組織免稅收據（唯愛AI基金會 / 唯愛AI公益基金會）。</strong>
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl backdrop-blur-sm">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+              <i class="fa-solid fa-handshake-angle text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              徵集贊助商與合辦機構 / Call for Sponsors & Partners
+            </h2>
+          </div>
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            本大賽誠邀北美各界企業、機構、校友及熱心人士以贊助商或合辦/協辦單位身份參與支持！<strong class="text-amber-300 font-semibold">所有贊助費用均可開具美國 501(c)(3) 非營利組織免稅收據（唯愛AI基金會 / 唯愛AI公益基金會）。</strong>
           </p>
-          <div class="space-y-4">
-            <div class="border-l-4 border-yellow-500 pl-4 space-y-1">
-              <div class="text-sm font-bold text-yellow-500">💎 鑽石贊助商 ($5,000 以上)</div>
-              <p class="text-xs text-slate-400">享最高級別曝光、總決賽冠名權、LOGO主視覺呈現、致謝視頻、官網頭條展示等全套特權。</p>
+          <div class="space-y-3 pt-1">
+            <div class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-amber-400 p-3.5 rounded-xl space-y-1">
+              <div class="text-sm font-bold text-amber-300">💎 鑽石贊助商 ($5,000 以上)</div>
+              <p class="text-xs text-slate-300 leading-relaxed">享最高級別曝光、總決賽冠名權、LOGO主視覺呈現、致謝視頻、官網頭條展示等全套特權。</p>
             </div>
-            <div class="border-l-4 border-slate-300 pl-4 space-y-1">
-              <div class="text-sm font-bold text-slate-300">⚪ 白金贊助商 ($3,000 – $4,999)</div>
-              <p class="text-xs text-slate-400">享複賽或決賽冠名、官網顯著LOGO、宣傳物料重點呈現及培訓講座冠名。</p>
+            <div class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-slate-300 p-3.5 rounded-xl space-y-1">
+              <div class="text-sm font-bold text-slate-100">⚪ 白金贊助商 ($3,000 – $4,999)</div>
+              <p class="text-xs text-slate-300 leading-relaxed">享複賽或決賽冠名、官網顯著LOGO、宣傳物料重點呈現及培訓講座冠名。</p>
             </div>
-            <div class="border-l-4 border-yellow-600 pl-4 space-y-1">
-              <div class="text-sm font-bold text-yellow-600">🟡 黃金贊助商 ($1,500 – $2,999)</div>
-              <p class="text-xs text-slate-400">享賽區冠名、官網及海報LOGO、獲獎證書致謝及社交媒體曝光。</p>
+            <div class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-yellow-500 p-3.5 rounded-xl space-y-1">
+              <div class="text-sm font-bold text-yellow-300">🟡 黃金贊助商 ($1,500 – $2,999)</div>
+              <p class="text-xs text-slate-300 leading-relaxed">享賽區冠名、官網及海報LOGO、獲獎證書致謝及社交媒體曝光。</p>
             </div>
-            <div class="border-l-4 border-blue-400 pl-4 space-y-1">
-              <div class="text-sm font-bold text-blue-400">⚪ 白銀贊助商 ($800 – $1,499)</div>
-              <p class="text-xs text-slate-400">享官網LOGO展示、宣傳物料提及、獲獎名單致謝。</p>
+            <div class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-blue-400 p-3.5 rounded-xl space-y-1">
+              <div class="text-sm font-bold text-blue-300">⚪ 白銀贊助商 ($800 – $1,499)</div>
+              <p class="text-xs text-slate-300 leading-relaxed">享官網LOGO展示、宣傳物料提及、獲獎名單致謝。</p>
             </div>
-            <div class="border-l-4 border-amber-700 pl-4 space-y-1">
-              <div class="text-sm font-bold text-amber-700">🟤 銅級贊助商 ($300 – $799)</div>
-              <p class="text-xs text-slate-400">享官網及感謝名單列名、社交媒體鳴謝。</p>
+            <div class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-amber-600 p-3.5 rounded-xl space-y-1">
+              <div class="text-sm font-bold text-amber-400">🟤 銅級贊助商 ($300 – $799)</div>
+              <p class="text-xs text-slate-300 leading-relaxed">享官網及感謝名單列名、社交媒體鳴謝。</p>
             </div>
           </div>
-          <p class="text-xs text-slate-400 border-t border-slate-900 pt-4 leading-relaxed">
-            🤝 <strong>特別貢獻單位</strong>：實物或服務贊助（獎品、場地、技術支持等），根據貢獻提供相應權益。<br>
-            🤝 <strong>合辦 / 協辦機構</strong>：歡迎校友會、社團及企業共同主辦或協辦，可協商定制權益。
+          <p class="text-xs text-slate-300 border-t border-slate-800 pt-4 leading-relaxed space-y-1">
+            <span>🤝 <strong class="text-slate-100">特別貢獻單位</strong>：實物或服務贊助（獎品、場地、技術支持等），根據貢獻提供相應權益。</span><br>
+            <span>🤝 <strong class="text-slate-100">合辦 / 協辦機構</strong>：歡迎校友會、社團及企業共同主辦或協辦，可協商定制權益。</span>
           </p>
         </section>
 
         <!-- 組織架構 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-users text-blue-400"></i>
-            <span>組織架構 / Organization</span>
-          </h2>
-          <div class="grid sm:grid-cols-2 gap-6 text-sm">
-            <div>
-              <div class="font-bold text-slate-300">主辦單位</div>
-              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0">
+              <i class="fa-solid fa-users text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              組織架構 / Organization
+            </h2>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-6 text-sm pt-1">
+            <div class="bg-slate-950/60 border border-slate-800/80 p-4 rounded-2xl space-y-1.5">
+              <div class="font-bold text-blue-300 text-sm flex items-center gap-1.5"><i class="fa-solid fa-flag text-xs"></i> 主辦單位</div>
+              <div class="text-xs text-slate-300 leading-relaxed">
                 北卡浙大校友會 (ZJUAA NC)<br>
                 北加高校聯盟 (NACUAANC)
               </div>
             </div>
-            <div>
-              <div class="font-bold text-slate-300">合作單位</div>
-              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+            <div class="bg-slate-950/60 border border-slate-800/80 p-4 rounded-2xl space-y-1.5">
+              <div class="font-bold text-indigo-300 text-sm flex items-center gap-1.5"><i class="fa-solid fa-handshake text-xs"></i> 合作單位</div>
+              <div class="text-xs text-slate-300 leading-relaxed">
                 多個美東浙大校友會<br>
                 北美高校聯盟北加州、矽谷、南加州分會
               </div>
             </div>
-            <div>
-              <div class="font-bold text-slate-300">技術支持</div>
-              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+            <div class="bg-slate-950/60 border border-slate-800/80 p-4 rounded-2xl space-y-1.5">
+              <div class="font-bold text-emerald-300 text-sm flex items-center gap-1.5"><i class="fa-solid fa-microchip text-xs"></i> 技術支持</div>
+              <div class="text-xs text-slate-300 leading-relaxed">
                 唯愛AI基金會 (VI AI Foundation)<br>
                 唯愛AI公益基金會 (VI AI for Good Foundation)
               </div>
             </div>
-            <div>
-              <div class="font-bold text-slate-300">聯繫方式</div>
-              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed space-y-1">
+            <div class="bg-slate-950/60 border border-slate-800/80 p-4 rounded-2xl space-y-1.5">
+              <div class="font-bold text-amber-300 text-sm flex items-center gap-1.5"><i class="fa-solid fa-envelope text-xs"></i> 聯繫方式</div>
+              <div class="text-xs text-slate-300 leading-relaxed space-y-1">
                 <div>官方微信：chinesemusicai</div>
                 <div>Michael 微信：michaelhuo</div>
-                <div>官方郵箱：<a href="mailto:info@chinesemusic.ai" class="text-blue-400 hover:underline">info@chinesemusic.ai</a></div>
-                <div>Michael 郵箱：<a href="mailto:michael@chinesemusic.ai" class="text-blue-400 hover:underline">michael@chinesemusic.ai</a></div>
+                <div>官方郵箱：<a href="mailto:info@chinesemusic.ai" class="text-blue-400 font-semibold hover:underline">info@chinesemusic.ai</a></div>
+                <div>Michael 郵箱：<a href="mailto:michael@chinesemusic.ai" class="text-blue-400 font-semibold hover:underline">michael@chinesemusic.ai</a></div>
               </div>
             </div>
           </div>
