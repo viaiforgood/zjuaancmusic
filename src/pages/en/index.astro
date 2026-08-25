@@ -5,7 +5,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <BaseLayout lang="en" title="The 1st North American Chinese AI Music Creation & Creativity Contest 2026–2027" description="Co-hosted by ZJUAA NC and NACUAANC. Write the stories of the Chinese Diaspora with AI." path="/">
   <div class="max-w-4xl mx-auto px-6 space-y-12">
     <!-- Hero -->
-    <header class="text-center py-10 space-y-4">
+    <header class="text-center py-6 space-y-4 flex flex-col items-center">
+      <div class="w-24 h-24 md:w-28 md:h-28 rounded-full p-1 bg-gradient-to-tr from-blue-600 via-purple-500 to-amber-400 shadow-2xl shadow-blue-500/20 mb-2">
+        <img src="/images/logo.jpg" alt="ChineseMusic.AI Logo" class="w-full h-full rounded-full object-cover border-2 border-slate-950" />
+      </div>
       <div class="inline-flex items-center gap-x-2 bg-blue-950/40 text-blue-400 px-4 py-1.5 rounded-full text-xs font-semibold border border-blue-900/30">
         <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></span>
         <span>Write the Stories of the Chinese Diaspora with AI · Special Tribute to ZJU's 130th Anniversary</span>
@@ -17,8 +20,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Open to all Chinese living in North America with no university affiliation required. Create your musical stories with AI!
       </p>
       <div class="pt-4 flex justify-center gap-4">
-        <a href="#register" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105">
-          Register Now
+        <a href="/en/register" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105 flex items-center gap-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>Online Registration Form</span>
         </a>
         <a href="#details" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold transition-all hover:scale-105">
           Details
@@ -39,33 +43,50 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="md:col-span-2 space-y-10">
         
         <!-- About the Contest -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-bullseye text-blue-400"></i>
-            <span>About the Contest / 大赛宗旨</span>
-          </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            This competition is co-hosted by the <strong>Zhejiang University Alumni Association of North Carolina (ZJUAA NC)</strong> and <strong>NACUAANC</strong>, supported by multiple US East ZJU alumni associations, as well as NACUAA chapters in Northern California, Silicon Valley, Southern California, and other organizations.
+        <section class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-blue-950/30 border border-slate-800/80 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+              <i class="fa-solid fa-bullseye text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              About the Contest / 大赛宗旨
+            </h2>
+          </div>
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            This competition is co-hosted by the <strong class="text-white font-semibold underline decoration-blue-500/50 underline-offset-4">Zhejiang University Alumni Association of North Carolina (ZJUAA NC)</strong> and <strong class="text-white font-semibold underline decoration-blue-500/50 underline-offset-4">NACUAANC</strong>, supported by multiple US East ZJU alumni associations, as well as NACUAA chapters in Northern California, Silicon Valley, Southern California, and other organizations.
           </p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            This is the <strong>1st AI Music Creation & Creativity Contest built specifically for the Chinese diaspora in North America</strong>. We welcome all Chinese residents, immigrants, international students, and friends in North America to participate, with no university affiliation required.
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            This is the <strong class="text-blue-300 font-semibold">1st AI Music Creation & Creativity Contest built specifically for the Chinese diaspora in North America</strong>. We warmly welcome all Chinese residents, immigrants, international students, and friends in North America to participate, <span class="text-amber-200 font-medium">with no university affiliation required</span>.
           </p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Creators are encouraged to partner with AI to express Chinese stories, emotions, cultural fusion, and innovation in North America. A "Special Alma Mater Award" is also established to honor Zhejiang University's 130th Anniversary.
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            Creators are encouraged to partner with AI to express Chinese stories, emotions, cultural fusion, and innovation in North America. A <span class="text-amber-300 font-semibold">"Special Alma Mater Award"</span> is also established to honor Zhejiang University's 130th Anniversary.
           </p>
         </section>
 
         <!-- Eligibility -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-id-card text-blue-400"></i>
-            <span>Eligibility / 参赛资格</span>
-          </h2>
-          <ul class="list-disc pl-5 text-sm text-slate-300 space-y-2">
-            <li>Chinese residents, immigrants, students, and friends living in North America</li>
-            <li>No age limit, no university affiliation required</li>
-            <li>Individual or team submissions welcome</li>
-          </ul>
+        <section class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-indigo-950/30 border border-slate-800/80 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
+              <i class="fa-solid fa-id-card text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              Eligibility / 参赛资格
+            </h2>
+          </div>
+          <div class="grid gap-3 pt-1">
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+              <span>Chinese residents, immigrants, students, and friends living in North America</span>
+            </div>
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+              <span>No age limit, no university affiliation required (Open to all)</span>
+            </div>
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+              <span>Individual solo entries or team collaborative submissions welcome</span>
+            </div>
+          </div>
         </section>
 
         <!-- Structure -->
@@ -142,70 +163,71 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <span>Call for Sponsors & Partners</span>
           </h2>
           <p class="text-slate-300 text-sm leading-relaxed">
-            We welcome corporate sponsors, community organizations, and individual donors to join us! <strong>All sponsorships are eligible for US 501(c)(3) tax-deductible receipts issued by VI AI Foundation / VI AI for Good Foundation.</strong>
+            We sincerely invite enterprises, institutions, alumni, and friends across North America to participate as sponsors or co-organizers! <strong>All sponsorships are eligible for US 501(c)(3) non-profit tax deduction receipts (VI AI Foundation / VI AI for Good Foundation).</strong>
           </p>
           <div class="space-y-4">
             <div class="border-l-4 border-yellow-500 pl-4 space-y-1">
               <div class="text-sm font-bold text-yellow-500">💎 Diamond Sponsor ($5,000+)</div>
-              <p class="text-xs text-slate-400">Top-tier exposure, Grand Finals naming rights, main visual logo, thank-you video, headline homepage feature.</p>
+              <p class="text-xs text-slate-400">Top-tier exposure, Grand Finals title rights, prominent LOGO placement, video acknowledgment, headline homepage feature.</p>
             </div>
             <div class="border-l-4 border-slate-300 pl-4 space-y-1">
               <div class="text-sm font-bold text-slate-300">⚪ Platinum Sponsor ($3,000 – $4,999)</div>
-              <p class="text-xs text-slate-400">Semifinals or Finals stage naming, prominent website logo, media feature, workshop naming rights.</p>
+              <p class="text-xs text-slate-400">Semifinals or Finals title rights, prominent website LOGO, featured promotional materials, workshop naming rights.</p>
             </div>
             <div class="border-l-4 border-yellow-600 pl-4 space-y-1">
               <div class="text-sm font-bold text-yellow-600">🟡 Gold Sponsor ($1,500 – $2,999)</div>
-              <p class="text-xs text-slate-400">Hub stage naming rights, logo on posters, certificate appreciation, social media campaigns.</p>
+              <p class="text-xs text-slate-400">Regional hub title rights, website & poster LOGO, award certificate acknowledgment, social media spotlight.</p>
             </div>
             <div class="border-l-4 border-blue-400 pl-4 space-y-1">
               <div class="text-sm font-bold text-blue-400">⚪ Silver Sponsor ($800 – $1,499)</div>
-              <p class="text-xs text-slate-400">Website logo feature, promotional material mention, winner list acknowledgment.</p>
+              <p class="text-xs text-slate-400">Website LOGO listing, promotional material mentions, winners list acknowledgment.</p>
             </div>
             <div class="border-l-4 border-amber-700 pl-4 space-y-1">
               <div class="text-sm font-bold text-amber-700">🟤 Bronze Sponsor ($300 – $799)</div>
-              <p class="text-xs text-slate-400">Website and donor list feature, social media shout-outs.</p>
+              <p class="text-xs text-slate-400">Website and acknowledgments listing, social media thanks.</p>
             </div>
           </div>
           <p class="text-xs text-slate-400 border-t border-slate-900 pt-4 leading-relaxed">
-            🤝 <strong>Special Contribution Partners</strong>: In-kind or service sponsorships (prizes, venue, tech support, etc.).<br>
-            🤝 <strong>Co-Hosts / Co-Organizers</strong>: Alumni groups and organizations are welcome to co-host with custom benefits.
+            🤝 <strong>Special In-Kind Sponsors</strong>: Product/service contributions (prizes, venue, technical support) receive equivalent sponsor benefits.<br>
+            🤝 <strong>Co-Organizers / Partner Organizations</strong>: Alumni associations and societies are warmly welcomed to co-host.
           </p>
         </section>
 
-        <!-- Footer / Organization -->
+        <!-- Organization -->
         <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
           <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
             <i class="fa-solid fa-users text-blue-400"></i>
-            <span>Organization / Footer</span>
+            <span>Organization / 组织架构</span>
           </h2>
           <div class="grid sm:grid-cols-2 gap-6 text-sm">
             <div>
-              <div class="font-bold text-slate-300">Co-Hosts</div>
+              <div class="font-bold text-slate-300">Organizers / 主办单位</div>
               <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-                ZJUAA NC (北卡浙大校友会)<br>
-                NACUAANC (北加高校联盟)
+                ZJU Alumni Association of NC (ZJUAA NC)<br>
+                NACUAANC
               </div>
             </div>
             <div>
-              <div class="font-bold text-slate-300">Partner Organizations</div>
+              <div class="font-bold text-slate-300">Partners / 合作单位</div>
               <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
                 US East ZJU Alumni Associations<br>
-                NACUAA Northern CA, Silicon Valley, and Southern CA Chapters
+                NACUAA NC, Silicon Valley, SC Chapters
               </div>
             </div>
             <div>
-              <div class="font-bold text-slate-300">Technical Support</div>
+              <div class="font-bold text-slate-300">Technical & 501(c)(3) Support</div>
               <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
                 VI AI Foundation<br>
                 VI AI for Good Foundation
               </div>
             </div>
             <div>
-              <div class="font-bold text-slate-300">Contact & Website</div>
-              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-                Email: <a href="mailto:music@zjuaanc.org" class="text-blue-400 hover:underline">music@zjuaanc.org</a><br>
-                WeChat: michaelhuo<br>
-                Website: music.zjuaanc.org
+              <div class="font-bold text-slate-300">Contact / 联系方式</div>
+              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed space-y-1">
+                <div>Official WeChat: chinesemusicai</div>
+                <div>Michael WeChat: michaelhuo</div>
+                <div>Official Email: <a href="mailto:info@chinesemusic.ai" class="text-blue-400 hover:underline">info@chinesemusic.ai</a></div>
+                <div>Michael Email: <a href="mailto:michael@chinesemusic.ai" class="text-blue-400 hover:underline">michael@chinesemusic.ai</a></div>
               </div>
             </div>
           </div>
@@ -216,48 +238,53 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <!-- Right Column: Timeline & Contact -->
       <div class="space-y-6">
 
-        <!-- Register -->
+        <!-- WeChat QR -->
         <div id="register" class="bg-blue-950/20 border border-blue-900/30 rounded-3xl p-6 space-y-4 shadow-xl text-center">
           <h3 class="text-base font-bold text-slate-200 flex items-center justify-center gap-x-2">
             <i class="fa-solid fa-qrcode text-blue-500"></i>
-            <span>Scan to Register</span>
+            <span>Scan to Join Registration Group</span>
           </h3>
           <div class="flex flex-col items-center gap-2">
-            <img src="/images/wechat_match_registration_qr.jpg" alt="Contest Registration WeChat Group" class="w-36 h-36 rounded-2xl border border-slate-800 shadow-lg object-cover mx-auto" />
-            <span class="text-xs text-slate-400 mt-1">Scan QR code to join official registration group</span>
+            <img src="/images/wechat_match_registration_qr.jpg" alt="Contest Registration WeChat QR" class="w-36 h-36 rounded-2xl border border-slate-800 shadow-lg object-cover mx-auto" />
+            <span class="text-xs text-slate-400 mt-1">Scan to join the official contest WeChat group</span>
           </div>
         </div>
         
         <!-- Key Dates -->
-        <div class="bg-slate-900/30 border border-slate-900 rounded-3xl p-6 space-y-6 shadow-xl">
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 space-y-6 shadow-xl backdrop-blur-sm">
           <h3 class="text-lg font-bold text-slate-200 flex items-center gap-x-2">
-            <i class="fa-solid fa-calendar-days text-blue-500"></i>
+            <i class="fa-solid fa-calendar-days text-blue-400"></i>
             <span>Key Dates / 重要时间</span>
           </h3>
           <div class="space-y-4 text-xs">
-            <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
-              <div class="font-bold text-slate-200">August 28, 2026 (Friday)</div>
-              <div class="text-slate-400 mt-0.5">Registration & Submission Deadline (Midnight EDT)</div>
+            <div class="relative pl-6 border-l border-amber-500/40 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-400/50"></span>
+              <div class="font-bold text-amber-300">August 28, 2026 (Friday)</div>
+              <div class="text-slate-300 mt-0.5">ZJU 130th Anniversary Alma Mater Special Award Submission Deadline</div>
+            </div>
+            <div class="relative pl-6 border-l border-blue-500/40 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500 shadow-sm shadow-blue-500/50"></span>
+              <div class="font-bold text-blue-300 text-[13px]">September 18, 2026 (Friday · Lunar Aug 8)</div>
+              <div class="text-slate-200 font-medium mt-0.5">North America Contest Registration & Preliminary Submissions Deadline (Midnight EDT)</div>
             </div>
             <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-slate-500"></span>
               <div class="font-bold text-slate-200">September 26–28, 2026</div>
-              <div class="text-slate-400 mt-0.5">Preliminaries: Results across 8 hubs announced</div>
+              <div class="text-slate-400 mt-0.5">Preliminaries: Results across 8 regional hubs announced</div>
             </div>
             <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-slate-500"></span>
               <div class="font-bold text-slate-200">September 30, 2026</div>
               <div class="text-slate-400 mt-0.5">Recommend Outstanding Submissions to ZJU Alma Mater</div>
             </div>
             <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-slate-500"></span>
               <div class="font-bold text-slate-200">December 12, 2026 (Saturday)</div>
               <div class="text-slate-400 mt-0.5">Semifinals: East Alliance vs West Alliance</div>
             </div>
             <div class="relative pl-6 pb-1">
-              <span class="absolute left-[-4px] top-[4px] w-2 h-2 rounded-full bg-yellow-500"></span>
-              <div class="font-bold text-slate-200">February 27, 2027 (Saturday)</div>
+              <span class="absolute left-[-4px] top-[4px] w-2 h-2 rounded-full bg-yellow-400"></span>
+              <div class="font-bold text-yellow-300">February 27, 2027 (Saturday)</div>
               <div class="text-slate-400 mt-0.5">Grand Finals: Finalists showdown for top prizes</div>
             </div>
           </div>
@@ -275,11 +302,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="space-y-2 text-xs">
             <div class="flex items-center gap-2 text-slate-300">
               <i class="fa-brands fa-weixin text-blue-400 w-4"></i>
-              <span>WeChat: michaelhuo</span>
+              <span>Official WeChat: chinesemusicai</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <i class="fa-brands fa-weixin text-blue-400 w-4"></i>
+              <span>Michael's WeChat: michaelhuo</span>
             </div>
             <div class="flex items-center gap-2 text-slate-300">
               <i class="fa-regular fa-envelope text-blue-400 w-4"></i>
-              <a href="mailto:music@zjuaanc.org" class="hover:underline">music@zjuaanc.org</a>
+              <a href="mailto:info@chinesemusic.ai" class="hover:underline">info@chinesemusic.ai</a>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <i class="fa-regular fa-envelope text-blue-400 w-4"></i>
+              <a href="mailto:michael@chinesemusic.ai" class="hover:underline">michael@chinesemusic.ai</a>
             </div>
           </div>
         </div>

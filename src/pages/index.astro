@@ -5,7 +5,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout lang="zh-CN" title="首届北美华人AI音乐创作创意大赛 2026–2027" description="由北卡浙大校友会 (ZJUAA NC) 与 北加高校联盟 (NACUAANC) 共同主办的首届北美华人AI音乐创作创意大赛。" path="/">
   <div class="max-w-4xl mx-auto px-6 space-y-12">
     <!-- Hero -->
-    <header class="text-center py-10 space-y-4">
+    <header class="text-center py-6 space-y-4 flex flex-col items-center">
+      <div class="w-24 h-24 md:w-28 md:h-28 rounded-full p-1 bg-gradient-to-tr from-blue-600 via-purple-500 to-amber-400 shadow-2xl shadow-blue-500/20 mb-2">
+        <img src="/images/logo.jpg" alt="ChineseMusic.AI Logo" class="w-full h-full rounded-full object-cover border-2 border-slate-950" />
+      </div>
       <div class="inline-flex items-center gap-x-2 bg-blue-950/40 text-blue-400 px-4 py-1.5 rounded-full text-xs font-semibold border border-blue-900/30">
         <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping"></span>
         <span>以AI为笔，谱写华人故事 · 特别致敬浙江大学130周年华诞</span>
@@ -17,8 +20,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         面向全北美华人开放，不限校友身份。欢迎以AI为辅助，创作属于我们的音乐故事。
       </p>
       <div class="pt-4 flex justify-center gap-4">
-        <a href="#register" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105">
-          立即报名 / Register Now
+        <a href="/register" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all shadow-lg hover:scale-105 flex items-center gap-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>在线报名表 / Register Now</span>
         </a>
         <a href="#details" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold transition-all hover:scale-105">
           赛事详情
@@ -39,33 +43,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="md:col-span-2 space-y-10">
         
         <!-- 大赛宗旨 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-bullseye text-blue-400"></i>
-            <span>大赛宗旨 / About the Contest</span>
-          </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            本大赛由 <strong>北卡浙大校友会 (ZJUAA NC)</strong> 与 <strong>北加高校联盟 (NACUAANC)</strong> 共同主办，联合多个美东浙大校友会，以及北美高校联盟北加州、硅谷、南加州分会等机构共同支持。
+        <section class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-blue-950/30 border border-slate-800/80 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+              <i class="fa-solid fa-bullseye text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              大赛宗旨 / About the Contest
+            </h2>
+          </div>
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            本大赛由 <strong class="text-white font-semibold underline decoration-blue-500/50 underline-offset-4">北卡浙大校友会 (ZJUAA NC)</strong> 与 <strong class="text-white font-semibold underline decoration-blue-500/50 underline-offset-4">北加高校联盟 (NACUAANC)</strong> 共同主办，联合多个美东浙大校友会，以及北美高校联盟北加州、硅谷、南加州分会等机构共同支持。
           </p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            这是<strong>首届专为北美华人打造的AI音乐创作创意大赛</strong>。我们欢迎所有居住在北美的华人、华裔、新移民、留学生及其亲友参与，不限是否为浙江大学校友。
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            这是<strong class="text-blue-300 font-semibold">首届专为北美华人打造的AI音乐创作创意大赛</strong>。我们热忱欢迎所有居住在北美的华人、华裔、新移民、留学生及其亲友参与，<span class="text-amber-200 font-medium">不限是否为浙江大学校友</span>。
           </p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            大赛鼓励创作者以AI为创作伙伴，表达华人在北美的故事、情感、文化融合与创新精神。同时设立“母校主题特别奖”，鼓励创作献给浙江大学130周年的作品。
+          <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
+            大赛鼓励创作者以AI为创作伙伴，表达华人在北美的故事、情感、文化融合与创新精神。同时设立<span class="text-amber-300 font-semibold">“母校主题特别奖”</span>，鼓励创作献给浙江大学130周年的作品。
           </p>
         </section>
 
         <!-- 参赛资格 -->
-        <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
-          <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
-            <i class="fa-solid fa-id-card text-blue-400"></i>
-            <span>参赛资格 / Eligibility</span>
-          </h2>
-          <ul class="list-disc pl-5 text-sm text-slate-300 space-y-2">
-            <li>居住在北美的华人、华裔、新移民、留学生及其亲友</li>
-            <li>不限年龄、不限是否为浙大校友</li>
-            <li>个人或团队均可参赛</li>
-          </ul>
+        <section class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-indigo-950/30 border border-slate-800/80 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+          <div class="flex items-center gap-x-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
+              <i class="fa-solid fa-id-card text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-100">
+              参赛资格 / Eligibility
+            </h2>
+          </div>
+          <div class="grid gap-3 pt-1">
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+              <span>居住在北美的华人、华裔、新移民、留学生及其亲友</span>
+            </div>
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+              <span>不限年龄、不限是否为浙大校友（面向全北美华人开放）</span>
+            </div>
+            <div class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/70 text-slate-200 text-sm font-medium">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+              <span>个人独立参赛 或 团队协同创作参赛均可</span>
+            </div>
+          </div>
         </section>
 
         <!-- 大赛架构 -->
@@ -176,7 +197,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <section class="bg-slate-900/20 border border-slate-900 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl">
           <h2 class="text-2xl font-bold text-slate-200 flex items-center gap-x-3">
             <i class="fa-solid fa-users text-blue-400"></i>
-            <span>组织架构 / Footer</span>
+            <span>组织架构 / Organization</span>
           </h2>
           <div class="grid sm:grid-cols-2 gap-6 text-sm">
             <div>
@@ -202,9 +223,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div>
               <div class="font-bold text-slate-300">联系方式</div>
-              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-                邮箱：<a href="mailto:music@zjuaanc.org" class="text-blue-400 hover:underline">music@zjuaanc.org</a><br>
-                微信：michaelhuo
+              <div class="text-xs text-slate-400 mt-1.5 leading-relaxed space-y-1">
+                <div>官方微信：chinesemusicai</div>
+                <div>Michael 微信：michaelhuo</div>
+                <div>官方邮箱：<a href="mailto:info@chinesemusic.ai" class="text-blue-400 hover:underline">info@chinesemusic.ai</a></div>
+                <div>Michael 邮箱：<a href="mailto:michael@chinesemusic.ai" class="text-blue-400 hover:underline">michael@chinesemusic.ai</a></div>
               </div>
             </div>
           </div>
@@ -228,36 +251,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <!-- 重要时间节点 -->
-        <div class="bg-slate-900/30 border border-slate-900 rounded-3xl p-6 space-y-6 shadow-xl">
+        <div class="bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 space-y-6 shadow-xl backdrop-blur-sm">
           <h3 class="text-lg font-bold text-slate-200 flex items-center gap-x-2">
-            <i class="fa-solid fa-calendar-days text-blue-500"></i>
+            <i class="fa-solid fa-calendar-days text-blue-400"></i>
             <span>重要时间 / Key Dates</span>
           </h3>
           <div class="space-y-4 text-xs">
-            <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
-              <div class="font-bold text-slate-200">2026年8月28日（周五）</div>
-              <div class="text-slate-400 mt-0.5">报名与初赛作品提交截止（夜里 EDT）</div>
+            <div class="relative pl-6 border-l border-amber-500/40 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-400/50"></span>
+              <div class="font-bold text-amber-300">2026年8月28日（周五）</div>
+              <div class="text-slate-300 mt-0.5">浙大130周年校庆主题特别投稿截止（推荐母校专属通道）</div>
+            </div>
+            <div class="relative pl-6 border-l border-blue-500/40 pb-2">
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500 shadow-sm shadow-blue-500/50"></span>
+              <div class="font-bold text-blue-300 text-[13px]">2026年9月18日（农历八月初八，周五）</div>
+              <div class="text-slate-200 font-medium mt-0.5">北美大赛报名与初赛作品提交截止（夜里 EDT）</div>
             </div>
             <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-slate-500"></span>
               <div class="font-bold text-slate-200">2026年9月26–28日</div>
               <div class="text-slate-400 mt-0.5">初赛：八大赛区海选结果揭晓</div>
             </div>
             <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-slate-500"></span>
               <div class="font-bold text-slate-200">2026年9月30日</div>
-              <div class="text-slate-400 mt-0.5">推荐母校：优秀作品推荐给浙江大学参与校庆活动</div>
+              <div class="text-slate-400 mt-0.5">推荐母校：优秀作品推荐递交浙大校友总会参与校庆活动</div>
             </div>
             <div class="relative pl-6 border-l border-slate-800 pb-2">
-              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="absolute left-[-4.5px] top-[4px] w-2 h-2 rounded-full bg-slate-500"></span>
               <div class="font-bold text-slate-200">2026年12月12日（周六）</div>
               <div class="text-slate-400 mt-0.5">复赛：东部联盟 vs 西部联盟对决</div>
             </div>
             <div class="relative pl-6 pb-1">
-              <span class="absolute left-[-4px] top-[4px] w-2 h-2 rounded-full bg-yellow-500"></span>
-              <div class="font-bold text-slate-200">2027年2月27日（周六）</div>
-              <div class="text-slate-400 mt-0.5">总决赛：东西联盟晋级作品终极角逐</div>
+              <span class="absolute left-[-4px] top-[4px] w-2 h-2 rounded-full bg-yellow-400"></span>
+              <div class="font-bold text-yellow-300">2027年2月27日（周六）</div>
+              <div class="text-slate-400 mt-0.5">总决赛：东西联盟晋级作品终极角逐与颁奖</div>
             </div>
           </div>
         </div>
@@ -274,11 +302,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="space-y-2 text-xs">
             <div class="flex items-center gap-2 text-slate-300">
               <i class="fa-brands fa-weixin text-blue-400 w-4"></i>
-              <span>微信: michaelhuo</span>
+              <span>官方微信: chinesemusicai</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <i class="fa-brands fa-weixin text-blue-400 w-4"></i>
+              <span>Michael 微信: michaelhuo</span>
             </div>
             <div class="flex items-center gap-2 text-slate-300">
               <i class="fa-regular fa-envelope text-blue-400 w-4"></i>
-              <a href="mailto:music@zjuaanc.org" class="hover:underline">music@zjuaanc.org</a>
+              <a href="mailto:info@chinesemusic.ai" class="hover:underline">info@chinesemusic.ai</a>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <i class="fa-regular fa-envelope text-blue-400 w-4"></i>
+              <a href="mailto:michael@chinesemusic.ai" class="hover:underline">michael@chinesemusic.ai</a>
             </div>
           </div>
         </div>

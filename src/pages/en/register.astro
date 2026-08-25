@@ -1,0 +1,518 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout lang="en" title="Registration Form · 1st North American Chinese AI Music Contest 2026–2027" description="Official Registration Form for the 1st North American Chinese AI Music Creation & Creativity Contest." path="/en/register">
+  <div class="max-w-3xl mx-auto px-6 py-4">
+    
+    <!-- Title & Intro Header -->
+    <header class="text-center space-y-3 mb-8">
+      <div class="inline-flex items-center gap-x-2 bg-blue-950/40 text-blue-400 px-4 py-1.5 rounded-full text-xs font-semibold border border-blue-900/30">
+        <i class="fa-solid fa-music"></i>
+        <span>1st North American Chinese AI Music Contest · Official Registration</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-100">
+        Contest Registration Form
+      </h1>
+      <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+        Write the Stories of the Chinese Diaspora with AI · Special Tribute to ZJU's 130th Anniversary
+      </p>
+    </header>
+
+    <!-- Multi-Step Container Card -->
+    <div class="bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 md:p-10 shadow-2xl backdrop-blur-xl relative">
+      
+      <!-- Progress Bar Tracker -->
+      <div id="progress-bar-container" class="mb-8">
+        <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-3">
+          <span id="step-indicator">Step 1 of 5: Basic Information</span>
+          <span id="progress-percent" class="text-blue-400 font-mono">20%</span>
+        </div>
+        <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+          <div id="progress-bar" class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full rounded-full transition-all duration-500" style="width: 20%;"></div>
+        </div>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="registration-form" onsubmit="return false;" class="space-y-8">
+        
+        <!-- STEP 1: Basic Information -->
+        <div id="step-1" class="step-content space-y-6">
+          <h2 class="text-xl font-bold text-slate-100 border-b border-slate-800 pb-3 flex items-center gap-2">
+            <i class="fa-solid fa-user text-blue-400"></i>
+            <span>Step 1: Basic Information</span>
+          </h2>
+          
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="space-y-1.5">
+              <label class="block text-xs font-bold text-slate-300">
+                Full Name / 姓名 <span class="text-red-400">*</span>
+              </label>
+              <input type="text" id="name" name="name" required placeholder="e.g. Wei Zhang" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-bold text-slate-300">
+                English Name <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <input type="text" id="english_name" name="english_name" placeholder="e.g. David Zhang" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-bold text-slate-300">
+                Email Address <span class="text-red-400">*</span>
+              </label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-bold text-slate-300">
+                WeChat ID <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <input type="text" id="wechat" name="wechat" placeholder="WeChat ID" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-bold text-slate-300">
+                Phone Number <span class="text-slate-500 font-normal">(Optional)</span>
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (123) 456-7890" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-bold text-slate-300">
+                City & State <span class="text-red-400">*</span>
+              </label>
+              <input type="text" id="city" name="city" required placeholder="e.g. San Jose, CA / Raleigh, NC" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+            </div>
+          </div>
+
+          <div class="space-y-1.5 pt-2">
+            <label class="block text-xs font-bold text-slate-300">
+              Region Hub <span class="text-red-400">*</span>
+            </label>
+            <select id="hub" name="hub" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors">
+              <option value="">-- Select Hub Region --</option>
+              <option value="NC">North Carolina Hub (NC)</option>
+              <option value="DC">Greater Washington DC Hub (DC)</option>
+              <option value="TN">Tennessee Hub (TN)</option>
+              <option value="FL">Florida Hub (FL)</option>
+              <option value="PA">Pennsylvania Hub (PA)</option>
+              <option value="TX">Texas Hub (TX)</option>
+              <option value="CA">California Hub (CA)</option>
+              <option value="WA">Washington Hub (WA)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 2: Participant Identity -->
+        <div id="step-2" class="step-content space-y-6 hidden">
+          <h2 class="text-xl font-bold text-slate-100 border-b border-slate-800 pb-3 flex items-center gap-2">
+            <i class="fa-solid fa-users text-blue-400"></i>
+            <span>Step 2: Participant Identity</span>
+          </h2>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-slate-300">Submission Category <span class="text-red-400">*</span></label>
+            <div class="grid grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <input type="radio" name="participant_type" value="individual" checked onchange="toggleTeamName(false)" class="text-blue-500" />
+                <span class="text-sm font-semibold text-slate-200">Individual Entry</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <input type="radio" name="participant_type" value="team" onchange="toggleTeamName(true)" class="text-blue-500" />
+                <span class="text-sm font-semibold text-slate-200">Team Entry</span>
+              </label>
+            </div>
+          </div>
+
+          <div id="team-name-container" class="space-y-1.5 hidden">
+            <label class="block text-xs font-bold text-slate-300">
+              Team / Band Name <span class="text-red-400">*</span>
+            </label>
+            <input type="text" id="team_name" name="team_name" placeholder="Enter team or band name" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+          </div>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-slate-300">
+              Are you a ZJU Alumni or Friend? <span class="text-red-400">*</span>
+            </label>
+            <div class="grid grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <input type="radio" name="is_zju_affiliated" value="yes" checked class="text-blue-500" />
+                <span class="text-sm font-semibold text-slate-200">Yes (Alumni / Relative)</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <input type="radio" name="is_zju_affiliated" value="no" class="text-blue-500" />
+                <span class="text-sm font-semibold text-slate-200">No (Community Friend)</span>
+              </label>
+            </div>
+            <p class="text-[11px] text-slate-400 italic">Note: Open to all Chinese living in North America with equal eligibility.</p>
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="block text-xs font-bold text-slate-300">
+              Short Bio / Introduction <span class="text-slate-500 font-normal">(Optional, max 100 words)</span>
+            </label>
+            <textarea id="bio" name="bio" rows="3" placeholder="Briefly describe your background or interest in AI music..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 3: Categories -->
+        <div id="step-3" class="step-content space-y-6 hidden">
+          <h2 class="text-xl font-bold text-slate-100 border-b border-slate-800 pb-3 flex items-center gap-2">
+            <i class="fa-solid fa-layer-group text-blue-400"></i>
+            <span>Step 3: Competition Categories</span>
+          </h2>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Select all creative categories that apply to your submission:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="诗词创作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">📜 Poetry Writing</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="歌词创作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">✍️ Lyrics Writing</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="曲谱作曲" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">🎼 Composition</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="编曲制作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">🎛️ Music Arranging</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="人声演唱" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">🎤 Vocal Performance</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="清唱 / A Cappella" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">🎶 A Cappella</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="器乐演奏" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">🎻 Instrumental Performance</span>
+            </label>
+            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="音乐视频 / MV 制作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
+              <span class="text-sm font-semibold text-slate-200">🎬 Music Video (MV)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- STEP 4: Submission Details -->
+        <div id="step-4" class="step-content space-y-6 hidden">
+          <h2 class="text-xl font-bold text-slate-100 border-b border-slate-800 pb-3 flex items-center gap-2">
+            <i class="fa-solid fa-link text-blue-400"></i>
+            <span>Step 4: Submission Details</span>
+          </h2>
+
+          <div class="space-y-1.5">
+            <label class="block text-xs font-bold text-slate-300">
+              Work / Song Title <span class="text-red-400">*</span>
+            </label>
+            <input type="text" id="work_title" name="work_title" required placeholder="e.g. Nocturne of Silicon Valley" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="block text-xs font-bold text-slate-300">
+              Public Work URL <span class="text-red-400">*</span>
+            </label>
+            <input type="url" id="work_url" name="work_url" required placeholder="https://suno.com/... or YouTube / NetEase / Google Drive URL" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors font-mono text-xs" />
+            <p class="text-[11px] text-slate-400 leading-relaxed">
+              💡 Note: Please provide a publicly accessible link (Suno, Udio, Netease, YouTube, Bilibili, Google Drive, Dropbox, etc.).
+            </p>
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="block text-xs font-bold text-slate-300">
+              Concept & Creative Description <span class="text-slate-500 font-normal">(100-300 words recommended)</span>
+            </label>
+            <textarea id="work_concept" name="work_concept" rows="4" placeholder="Describe the creative inspiration, AI tools used (Suno/Udio/ChatGPT), and emotions/story expressed..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+          </div>
+
+          <div class="space-y-2 border-t border-slate-800/80 pt-4">
+            <label class="block text-xs font-bold text-slate-300">
+              Participate in Special Alma Mater Award (ZJU 130th Anniversary)? <span class="text-red-400">*</span>
+            </label>
+            <div class="grid grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <input type="radio" name="is_alma_mater_award" value="yes" class="text-blue-500" />
+                <span class="text-sm font-semibold text-slate-200">Yes (Participate)</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <input type="radio" name="is_alma_mater_award" value="no" checked class="text-blue-500" />
+                <span class="text-sm font-semibold text-slate-200">No (Main Contest Only)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="block text-xs font-bold text-slate-300">
+              Additional Notes <span class="text-slate-500 font-normal">(Optional)</span>
+            </label>
+            <input type="text" id="notes" name="notes" placeholder="Any extra information for the judges" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
+          </div>
+        </div>
+
+        <!-- STEP 5: Final Review & Confirmation -->
+        <div id="step-5" class="step-content space-y-6 hidden">
+          <h2 class="text-xl font-bold text-slate-100 border-b border-slate-800 pb-3 flex items-center gap-2">
+            <i class="fa-solid fa-check-circle text-blue-400"></i>
+            <span>Step 5: Final Review & Declaration</span>
+          </h2>
+
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 space-y-3 text-xs">
+            <div class="font-bold text-slate-200 border-b border-slate-900 pb-2 text-sm">📋 Summary Preview</div>
+            <div class="grid grid-cols-2 gap-2 text-slate-300">
+              <div><span class="text-slate-500">Name: </span><span id="preview-name" class="font-semibold text-slate-200">--</span></div>
+              <div><span class="text-slate-500">Email: </span><span id="preview-email" class="font-semibold text-slate-200">--</span></div>
+              <div><span class="text-slate-500">Hub: </span><span id="preview-hub" class="font-semibold text-slate-200">--</span></div>
+              <div><span class="text-slate-500">Entry: </span><span id="preview-type" class="font-semibold text-slate-200">--</span></div>
+              <div class="col-span-2"><span class="text-slate-500">Work Title: </span><span id="preview-work-title" class="font-bold text-blue-400">--</span></div>
+              <div class="col-span-2 truncate"><span class="text-slate-500">Work URL: </span><span id="preview-work-url" class="font-mono text-slate-400">--</span></div>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <label class="flex items-start gap-3 p-4 bg-blue-950/20 border border-blue-900/30 rounded-2xl cursor-pointer hover:bg-blue-950/30 transition-colors">
+              <input type="checkbox" id="agreed" name="agreed" required class="rounded text-blue-500 bg-slate-900 border-slate-700 w-5 h-5 mt-0.5" />
+              <div class="text-xs text-slate-300 leading-relaxed">
+                <span class="font-bold text-slate-100">I agree to the Contest Rules & Originality Declaration <span class="text-red-400">*</span></span><br />
+                I confirm that the submitted work is created with legitimate AI assistance and does not violate third-party intellectual property rights.
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Action Navigation Buttons -->
+        <div class="flex items-center justify-between pt-6 border-t border-slate-800">
+          <button type="button" id="btn-prev" onclick="changeStep(-1)" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-sm transition-all hidden">
+            <i class="fa-solid fa-arrow-left mr-1.5"></i> Back
+          </button>
+          <div class="ml-auto flex items-center gap-3">
+            <button type="button" id="btn-next" onclick="changeStep(1)" class="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg hover:scale-105">
+              Next <i class="fa-solid fa-arrow-right ml-1.5"></i>
+            </button>
+            <button type="button" id="btn-submit" onclick="submitForm()" class="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm transition-all shadow-xl hover:scale-105 hidden">
+              <i class="fa-solid fa-paper-plane mr-2"></i> Submit Registration
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- SUCCESS SUBMISSION SCREEN -->
+      <div id="success-screen" class="space-y-6 text-center py-8 hidden">
+        <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30 text-2xl">
+          <i class="fa-solid fa-check animate-bounce"></i>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Thank You for Registering!</h2>
+          <p class="text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
+            We have successfully received your submission details. The committee will review entries during the preliminary stage.
+          </p>
+        </div>
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 max-w-sm mx-auto font-mono text-xs text-blue-400">
+          Ref ID: <span id="success-ref-id" class="font-bold text-white">CM2026-XXXXXXXX</span>
+        </div>
+        <div class="text-xs text-slate-500 space-y-1">
+          <p>For questions, contact the committee:</p>
+          <p class="text-slate-400"><a href="mailto:info@chinesemusic.ai" class="text-blue-400 hover:underline">info@chinesemusic.ai</a> / <a href="mailto:michael@chinesemusic.ai" class="text-blue-400 hover:underline">michael@chinesemusic.ai</a></p>
+        </div>
+        <div class="pt-4">
+          <a href="/en" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold text-xs inline-block transition-all">
+            Back to Home Page
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script is:inline>
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    function updateStepUI() {
+      for (let i = 1; i <= totalSteps; i++) {
+        const el = document.getElementById(`step-${i}`);
+        if (el) el.classList.add('hidden');
+      }
+      const currentEl = document.getElementById(`step-${currentStep}`);
+      if (currentEl) currentEl.classList.remove('hidden');
+
+      const progressPercent = Math.round((currentStep / totalSteps) * 100);
+      const progressBar = document.getElementById('progress-bar');
+      const progressText = document.getElementById('progress-percent');
+      const stepIndicator = document.getElementById('step-indicator');
+
+      const stepTitles = [
+        'Step 1 of 5: Basic Info',
+        'Step 2 of 5: Identity',
+        'Step 3 of 5: Categories',
+        'Step 4 of 5: Submission Details',
+        'Step 5 of 5: Confirmation'
+      ];
+
+      if (progressBar) progressBar.style.width = `${progressPercent}%`;
+      if (progressText) progressText.innerText = `${progressPercent}%`;
+      if (stepIndicator) stepIndicator.innerText = stepTitles[currentStep - 1];
+
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      const btnSubmit = document.getElementById('btn-submit');
+
+      if (currentStep === 1) {
+        btnPrev.classList.add('hidden');
+      } else {
+        btnPrev.classList.remove('hidden');
+      }
+
+      if (currentStep === totalSteps) {
+        btnNext.classList.add('hidden');
+        btnSubmit.classList.remove('hidden');
+        updatePreview();
+      } else {
+        btnNext.classList.remove('hidden');
+        btnSubmit.classList.add('hidden');
+      }
+    }
+
+    function toggleTeamName(isTeam) {
+      const container = document.getElementById('team-name-container');
+      const input = document.getElementById('team_name');
+      if (isTeam) {
+        container.classList.remove('hidden');
+        input.setAttribute('required', 'true');
+      } else {
+        container.classList.add('hidden');
+        input.removeAttribute('required');
+      }
+    }
+
+    function validateCurrentStep() {
+      if (currentStep === 1) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const hub = document.getElementById('hub').value;
+        if (!name || !email || !city || !hub) {
+          alert('Please fill out required fields: Name, Email, City, and Region Hub');
+          return false;
+        }
+      } else if (currentStep === 2) {
+        const isTeam = document.querySelector('input[name="participant_type"]:checked').value === 'team';
+        if (isTeam) {
+          const teamName = document.getElementById('team_name').value.trim();
+          if (!teamName) {
+            alert('Please enter your Team Name');
+            return false;
+          }
+        }
+      } else if (currentStep === 4) {
+        const workTitle = document.getElementById('work_title').value.trim();
+        const workUrl = document.getElementById('work_url').value.trim();
+        if (!workTitle || !workUrl) {
+          alert('Please enter your Work Title and Public Work URL');
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function changeStep(delta) {
+      if (delta > 0 && !validateCurrentStep()) {
+        return;
+      }
+      currentStep += delta;
+      if (currentStep < 1) currentStep = 1;
+      if (currentStep > totalSteps) currentStep = totalSteps;
+      updateStepUI();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updatePreview() {
+      document.getElementById('preview-name').innerText = document.getElementById('name').value || '--';
+      document.getElementById('preview-email').innerText = document.getElementById('email').value || '--';
+      document.getElementById('preview-hub').innerText = document.getElementById('hub').value || '--';
+      
+      const type = document.querySelector('input[name="participant_type"]:checked').value;
+      document.getElementById('preview-type').innerText = type === 'team' ? `Team (${document.getElementById('team_name').value})` : 'Individual';
+      
+      document.getElementById('preview-work-title').innerText = document.getElementById('work_title').value || '--';
+      document.getElementById('preview-work-url').innerText = document.getElementById('work_url').value || '--';
+    }
+
+    async function submitForm() {
+      const agreed = document.getElementById('agreed').checked;
+      if (!agreed) {
+        alert('Please agree to the Contest Rules & Declaration');
+        return;
+      }
+
+      const form = document.getElementById('registration-form');
+      const formData = new FormData(form);
+      
+      const selectedCategories = [];
+      document.querySelectorAll('input[name="categories"]:checked').forEach((cb) => {
+        selectedCategories.push(cb.value);
+      });
+
+      const payload = {
+        name: formData.get('name'),
+        english_name: formData.get('english_name'),
+        email: formData.get('email'),
+        wechat: formData.get('wechat'),
+        phone: formData.get('phone'),
+        city: formData.get('city'),
+        hub: formData.get('hub'),
+        participant_type: formData.get('participant_type'),
+        team_name: formData.get('team_name'),
+        is_zju_affiliated: formData.get('is_zju_affiliated'),
+        bio: formData.get('bio'),
+        categories: selectedCategories,
+        work_title: formData.get('work_title'),
+        work_url: formData.get('work_url'),
+        work_concept: formData.get('work_concept'),
+        is_alma_mater_award: formData.get('is_alma_mater_award'),
+        notes: formData.get('notes'),
+        agreed: true
+      };
+
+      const btnSubmit = document.getElementById('btn-submit');
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-2"></i> Submitting...`;
+
+      try {
+        const response = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+        if (response.ok && data.success) {
+          document.getElementById('registration-form').classList.add('hidden');
+          document.getElementById('progress-bar-container').classList.add('hidden');
+          document.getElementById('success-ref-id').innerText = data.refId;
+          document.getElementById('success-screen').classList.remove('hidden');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          alert(`Submission failed: ${data.error || 'Server error'}`);
+          btnSubmit.disabled = false;
+          btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane mr-2"></i> Submit Registration`;
+        }
+      } catch (err) {
+        alert('Network error during submission. Please check your connection.');
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane mr-2"></i> Submit Registration`;
+      }
+    }
+  </script>
+</BaseLayout>

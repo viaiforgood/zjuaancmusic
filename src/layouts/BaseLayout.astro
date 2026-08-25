@@ -22,10 +22,10 @@ const getPath = (targetPath: string, targetLang: string) => {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title} · ZJUAANC</title>
+  <title>{title} · ChineseMusic.AI</title>
   <meta name="description" content={description} />
-  <link rel="icon" type="image/png" href="/icons/icon-192.png" />
-  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+  <link rel="apple-touch-icon" href="/images/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -35,11 +35,11 @@ const getPath = (targetPath: string, targetLang: string) => {
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-900/80">
     <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href={getPath('/', lang)} class="flex items-center gap-2">
-        <img src="/icons/icon-192.png" alt="ZJUAANC" class="w-8 h-8 rounded-lg object-cover" />
+      <a href={getPath('/', lang)} class="flex items-center gap-3 group">
+        <img src="/images/logo.jpg" alt="ChineseMusic.AI Logo" class="w-9 h-9 rounded-full object-cover border border-blue-500/30 shadow-md group-hover:scale-105 transition-transform" />
         <div class="flex flex-col">
-          <span class="font-bold text-sm tracking-tight text-slate-200 leading-none font-sans">ZJUAANC MUSIC</span>
-          <span class="text-[10px] text-slate-500 mt-1">AI音乐大赛</span>
+          <span class="font-bold text-sm tracking-tight text-slate-100 leading-none">ChineseMusic.AI</span>
+          <span class="text-[10px] text-slate-400 mt-1">首届北美华人AI音乐大赛</span>
         </div>
       </a>
       
@@ -59,15 +59,16 @@ const getPath = (targetPath: string, targetLang: string) => {
 
   <!-- Footer -->
   <footer class="bg-slate-950 border-t border-slate-900 py-10">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-500 text-xs">
-      <div>
-        <p>© 2026 ZJUAANC. All rights reserved.</p>
-        <p class="mt-1">主办：北卡浙大校友会 (ZJUAA NC) | 技术支持：VI AI Foundation (501c3 免税支持)</p>
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-slate-500 text-xs">
+      <div class="space-y-1">
+        <p>© 2026 ChineseMusic.AI. All rights reserved.</p>
+        <p>联合主办：北卡浙大校友会 (ZJUAA NC) & 北加高校联盟 (NACUAANC) | 技术支持：VI AI Foundation (501c3 免税支持)</p>
+        <p class="text-[11px] text-slate-600">Domains: <a href="https://chinesemusic.ai" class="hover:text-slate-400 transition-colors">chinesemusic.ai</a> · <a href="https://music.zjuaanc.org" class="hover:text-slate-400 transition-colors">music.zjuaanc.org</a> · <a href="https://music.nacuaanc.org" class="hover:text-slate-400 transition-colors">music.nacuaanc.org</a></p>
       </div>
-      <div class="flex gap-x-6 text-slate-400">
-        <a href="https://zjuaanc.org" target="_blank" class="hover:text-blue-600 transition-colors">校友会总部官网</a>
-        <a href="https://zju.to" target="_blank" class="hover:text-blue-600 transition-colors">ZJU.to 导航站</a>
-        <a href="https://viaiforgood.org" target="_blank" class="hover:text-blue-600 transition-colors">VI AI for Good</a>
+      <div class="flex gap-x-6 text-slate-500 shrink-0">
+        <a href="https://zjuaanc.org" target="_blank" class="hover:text-slate-400 transition-colors">ZJUAA NC</a>
+        <a href="https://nacuaanc.org" target="_blank" class="hover:text-slate-400 transition-colors">NACUAANC</a>
+        <a href="https://viaiforgood.org" target="_blank" class="hover:text-slate-400 transition-colors">VI AI for Good</a>
       </div>
     </div>
   </footer>
