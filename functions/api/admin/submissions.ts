@@ -1,8 +1,10 @@
 interface Env {
-  CHINESEMUSIC_R2?: any;
-  CHINESEMUSIC_KV?: any;
+  TALLY_API_KEY?: string;
   ADMIN_SECRET?: string;
 }
+
+const TALLY_FORM_ID = 'aQqXGW';
+const DEFAULT_TALLY_KEY = 'tly-Re3eGLMMizCPTaTjDBWjHVuMDjoJYulK';
 
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   try {
@@ -16,66 +18,105 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 
     if (!providedKey || providedKey !== validSecret) {
       return new Response(
-        JSON.stringify({ success: false, error: 'Unauthorized: Invalid or missing admin key' }),
+        JSON.stringify({ success: false, error: 'Unauthorized: Invalid admin key' }),
         { status: 401, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
-    const submissions: any[] = [];
-    let source = 'none';
+    const tallyKey = context.env.TALLY_API_KEY || DEFAULT_TALLY_KEY;
 
-    // 1. Try reading from KV
-    if (context.env.CHINESEMUSIC_KV) {
-      source = 'KV';
-      const list = await context.env.CHINESEMUSIC_KV.list({ prefix: 'submission:' });
-      for (const key of list.keys) {
-        const val = await context.env.CHINESEMUSIC_KV.get(key.name);
-        if (val) {
-          try {
-            submissions.push(JSON.parse(val));
-          } catch (e) {
-            submissions.push({ key: key.name, raw: val });
-          }
-        }
+    // Fetch from Tally API
+    const tallyRes = await fetch(`https://api.tally.so/forms/${TALLY_FORM_ID}/submissions`, {
+      headers: {
+        'Authorization': `Bearer ${tallyKey}`,
+        'User-Agent': 'ChineseMusic-Admin/1.0'
       }
-    } 
-    // 2. Try reading from R2 if KV empty or unavailable
-    else if (context.env.CHINESEMUSIC_R2) {
-      source = 'R2';
-      const list = await context.env.CHINESEMUSIC_R2.list({ prefix: 'submissions/' });
-      for (const obj of list.objects) {
-        const file = await context.env.CHINESEMUSIC_R2.get(obj.key);
-        if (file) {
-          const text = await file.text();
-          try {
-            submissions.push(JSON.parse(text));
-          } catch (e) {
-            submissions.push({ key: obj.key, raw: text });
-          }
+    });
+
+    if (!tallyRes.ok) {
+      const errText = await tallyRes.text();
+      return new Response(
+        JSON.stringify({ success: false, error: `Tally API Error: ${errText}` }),
+        { status: tallyRes.status, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const tallyData = await tallyRes.json() as Record<string, any>;
+    const rawSubmissions = tallyData.submissions || [];
+    const questions = tallyData.questions || [];
+
+    // Map questions to readable labels
+    const questionMap: Record<string, string> = {};
+    for (const q of questions) {
+      if (q.fields && Array.isArray(q.fields)) {
+        for (const f of q.fields) {
+          questionMap[f.uuid] = q.title;
         }
       }
     }
 
-    // Sort by submittedAt descending (newest first)
-    submissions.sort((a, b) => {
-      const dateA = new Date(a.submittedAt || 0).getTime();
-      const dateB = new Date(b.submittedAt || 0).getTime();
-      return dateB - dateA;
+    const formattedList = rawSubmissions.map((s: any) => {
+      const answers = s.answers || [];
+      const data: Record<string, any> = {
+        id: s.id,
+        submittedAt: s.submittedAt || s.createdAt,
+        name: '',
+        english_name: '',
+        email: '',
+        wechat: '',
+        phone: '',
+        city: '',
+        hub: '',
+        participant_type: '',
+        team_name: '',
+        creation_mode: '',
+        categories: '',
+        work_title: '',
+        work_url: '',
+        work_concept: '',
+        is_alma_mater_award: '',
+        declaration: ''
+      };
+
+      for (const ans of answers) {
+        const title = questionMap[ans.fieldUuid] || '';
+        const val = ans.value;
+        const displayVal = Array.isArray(val) ? val.join(', ') : String(val ?? '');
+
+        if (title.includes('姓名') || title.includes('Full Name')) data.name = displayVal;
+        else if (title.includes('英文名') || title.includes('English Name')) data.english_name = displayVal;
+        else if (title.includes('邮箱') || title.includes('Email')) data.email = displayVal;
+        else if (title.includes('微信') || title.includes('WeChat')) data.wechat = displayVal;
+        else if (title.includes('电话') || title.includes('Phone')) data.phone = displayVal;
+        else if (title.includes('城市') || title.includes('City')) data.city = displayVal;
+        else if (title.includes('赛区') || title.includes('Region Hub')) data.hub = displayVal;
+        else if (title.includes('参赛形式') || title.includes('Participation Type')) data.participant_type = displayVal;
+        else if (title.includes('团队名称') || title.includes('Team Name')) data.team_name = displayVal;
+        else if (title.includes('创作形式') || title.includes('Creation Mode')) data.creation_mode = displayVal;
+        else if (title.includes('赛道') || title.includes('Categories')) data.categories = displayVal;
+        else if (title.includes('作品标题') || title.includes('Work Title')) data.work_title = displayVal;
+        else if (title.includes('作品链接') || title.includes('Work URL')) data.work_url = displayVal;
+        else if (title.includes('创作理念') || title.includes('Concept')) data.work_concept = displayVal;
+        else if (title.includes('母校') || title.includes('特别奖')) data.is_alma_mater_award = displayVal;
+        else if (title.includes('声明') || title.includes('Declaration')) data.declaration = displayVal;
+      }
+
+      return data;
     });
 
     // Check if CSV format requested
     if (url.searchParams.get('format') === 'csv') {
       const headers = [
-        'Ref ID', 'Submitted At', 'Name', 'English Name', 'Email', 'WeChat', 'Phone',
-        'City', 'Hub', 'Participant Type', 'Team Name', 'ZJU Affiliated', 'Creation Mode',
-        'Categories', 'Work Title', 'Work URL', 'Concept', 'Alma Mater Award', 'Notes'
+        'Submission ID', 'Submitted At', 'Name', 'English Name', 'Email', 'WeChat', 'Phone',
+        'City', 'Hub', 'Participant Type', 'Team Name', 'Creation Mode',
+        'Categories', 'Work Title', 'Work URL', 'Concept', 'Alma Mater Award'
       ];
 
       const csvRows = [headers.join(',')];
 
-      for (const s of submissions) {
+      for (const s of formattedList) {
         const row = [
-          s.refId || '',
+          s.id || '',
           s.submittedAt || '',
           s.name || '',
           s.english_name || '',
@@ -86,14 +127,12 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
           s.hub || '',
           s.participant_type || '',
           s.team_name || '',
-          s.is_zju_affiliated || '',
           s.creation_mode || '',
-          Array.isArray(s.categories) ? s.categories.join(';') : (s.categories || ''),
+          s.categories || '',
           s.work_title || '',
           s.work_url || '',
           (s.work_concept || '').replace(/[\r\n]+/g, ' '),
-          s.is_alma_mater_award || '',
-          (s.notes || '').replace(/[\r\n]+/g, ' ')
+          s.is_alma_mater_award || ''
         ].map(val => `"${String(val).replace(/"/g, '""')}"`);
 
         csvRows.push(row.join(','));
@@ -111,13 +150,11 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     return new Response(
       JSON.stringify({
         success: true,
-        count: submissions.length,
-        source,
-        storageConfig: {
-          hasKV: !!context.env.CHINESEMUSIC_KV,
-          hasR2: !!context.env.CHINESEMUSIC_R2
-        },
-        data: submissions
+        source: 'Tally Official API',
+        formId: TALLY_FORM_ID,
+        formUrl: `https://tally.so/r/${TALLY_FORM_ID}`,
+        count: formattedList.length,
+        data: formattedList
       }, null, 2),
       { status: 200, headers: { 'Content-Type': 'application/json' } }
     );
