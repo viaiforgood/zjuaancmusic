@@ -218,6 +218,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <input type="text" id="work_title" name="work_title" required placeholder="e.g. Nocturne of Silicon Valley" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
           </div>
 
+          <!-- Creation Mode -->
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-slate-300">
+              Creation Mode <span class="text-red-400">*</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="flex flex-col gap-1 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <div class="flex items-center gap-2">
+                  <input type="radio" name="creation_mode" value="no_ai" class="text-blue-500" />
+                  <span class="text-xs font-bold text-sky-300">Pure Human (No AI)</span>
+                </div>
+                <span class="text-[11px] text-slate-400">100% human songwriting & performance</span>
+              </label>
+              <label class="flex flex-col gap-1 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <div class="flex items-center gap-2">
+                  <input type="radio" name="creation_mode" value="ai_aided" checked class="text-blue-500" />
+                  <span class="text-xs font-bold text-purple-300">Hybrid (AI-Aided)</span>
+                </div>
+                <span class="text-[11px] text-slate-400">Human-AI co-creation & arrangement</span>
+              </label>
+              <label class="flex flex-col gap-1 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <div class="flex items-center gap-2">
+                  <input type="radio" name="creation_mode" value="aigc" class="text-blue-500" />
+                  <span class="text-xs font-bold text-amber-300">Full AI (AIGC)</span>
+                </div>
+                <span class="text-[11px] text-slate-400">End-to-end AI music / MV generation</span>
+              </label>
+            </div>
+          </div>
+
           <div class="space-y-1.5">
             <label class="block text-xs font-bold text-slate-300">
               Public Work URL <span class="text-red-400">*</span>

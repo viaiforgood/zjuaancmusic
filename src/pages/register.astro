@@ -230,6 +230,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <input type="text" id="work_title" name="work_title" required placeholder="例如：《硅谷的夜曲》、《梦回求是》" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition-colors" />
           </div>
 
+          <!-- 创作形式 (Creation Mode) -->
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-slate-300">
+              作品创作形式 / Creation Mode <span class="text-red-400">*</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="flex flex-col gap-1 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <div class="flex items-center gap-2">
+                  <input type="radio" name="creation_mode" value="no_ai" class="text-blue-500" />
+                  <span class="text-xs font-bold text-sky-300">纯人工原创 (No AI)</span>
+                </div>
+                <span class="text-[11px] text-slate-400">词/曲/演唱/演奏均纯人工完成</span>
+              </label>
+              <label class="flex flex-col gap-1 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <div class="flex items-center gap-2">
+                  <input type="radio" name="creation_mode" value="ai_aided" checked class="text-blue-500" />
+                  <span class="text-xs font-bold text-purple-300">人机协同 (AI-Aided)</span>
+                </div>
+                <span class="text-[11px] text-slate-400">人工与 AI 深度融合协同创作</span>
+              </label>
+              <label class="flex flex-col gap-1 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/50 transition-colors">
+                <div class="flex items-center gap-2">
+                  <input type="radio" name="creation_mode" value="aigc" class="text-blue-500" />
+                  <span class="text-xs font-bold text-amber-300">全流程 AI (AIGC)</span>
+                </div>
+                <span class="text-[11px] text-slate-400">Suno/Udio 等全流程生成</span>
+              </label>
+            </div>
+          </div>
+
           <!-- 作品链接 (Work URL) -->
           <div class="space-y-1.5">
             <label class="block text-xs font-bold text-slate-300">

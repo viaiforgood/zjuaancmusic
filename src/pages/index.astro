@@ -17,7 +17,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         首届北美华人AI音乐<br><span class="ai-gradient">创作创意大赛 2026–2027</span>
       </h1>
       <p class="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed">
-        面向全北美华人开放，不限校友身份。欢迎以AI为创作伙伴，打造属于全球华人的音乐传奇。
+        面向全北美华人、华裔及音乐爱好者开放。支持纯人工原创、人机协同与全流程AI创作，共同打造属于全球华人的音乐传奇。
       </p>
       <div class="pt-4 flex flex-wrap justify-center gap-3 md:gap-4">
         <a href="/register" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold transition-all shadow-lg shadow-blue-600/30 hover:scale-105 flex items-center gap-2">
@@ -60,36 +60,76 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             本大赛由 <span class="badge-blue">北卡浙大校友会 (ZJUAA NC)</span> 与 <span class="badge-indigo">北加高校联盟 (NACUAANC)</span> 共同主办，联合多个美东浙大校友会，以及北美高校联盟北加州、硅谷、南加州分会等机构共同支持。
           </p>
           <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
-            这是<strong class="text-sky-400 font-bold">首届专为北美华人打造的AI音乐创作创意大赛</strong>。我们热忱欢迎所有居住在北美的华人、华裔、新移民、留学生及其亲友参与，<span class="badge-gold">不限是否为浙江大学校友</span>。
+            这是<strong class="text-sky-400 font-bold">首届专为北美华人打造的音乐与AI创作创意大赛</strong>。大赛热忱欢迎北美广大华人华侨、留学生学者及音乐创意爱好者踊跃参与，表达华人在北美的生活故事、深厚情感、文化交融与科技创新精神。
           </p>
           <p class="text-slate-200 text-sm md:text-[15px] leading-relaxed">
-            大赛鼓励创作者以AI为创作伙伴，表达华人在北美的故事、情感、文化融合与创新精神。同时设立<span class="badge-gold">“母校主题特别奖”</span>，鼓励创作献给浙江大学130周年的作品。
+            大赛特设<span class="badge-gold">“母校主题特别奖”</span>，鼓励海内外校友与朋友创作献给浙江大学130周年华诞的音乐与创意作品。
           </p>
         </section>
 
-        <!-- 参赛资格 -->
-        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+        <!-- 参赛资格 & 作品形式 -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl backdrop-blur-sm relative overflow-hidden">
           <div class="flex items-center gap-x-3">
             <div class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shrink-0 shadow-sm">
               <i class="fa-solid fa-id-card text-lg"></i>
             </div>
             <h2 class="text-xl md:text-2xl font-bold text-white">
-              参赛资格 & 创作形式 / Eligibility & AI Policy
+              参赛资格与作品形式 / Eligibility & Formats
             </h2>
           </div>
-          <div class="grid gap-3 pt-1">
-            <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-950/70 border border-slate-800/80 text-slate-100 text-sm font-medium shadow-sm hover:border-slate-700 transition-colors">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-lg shrink-0"></i>
-              <span><strong>参赛人群广泛</strong>：居住在北美的华人、华裔、新移民、留学生及其亲友（不限年龄、不限是否为浙大校友）</span>
+
+          <!-- 参赛资格 -->
+          <div class="space-y-3">
+            <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+              <span class="w-1.5 h-4 bg-blue-500 rounded-full"></span>
+              <span>1. 参赛资格 / Eligibility</span>
+            </h3>
+            <div class="grid gap-2.5">
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-950/70 border border-slate-800/80 text-slate-100 text-sm font-medium">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                <span>居住在北美地区（美国、加拿大）的华人、华裔、留学生、学者及广大音乐创意爱好者</span>
+              </div>
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-950/70 border border-slate-800/80 text-slate-100 text-sm font-medium">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-base shrink-0"></i>
+                <span>不限年龄与职业背景；支持以个人独立参赛或团队协同创作形式参赛</span>
+              </div>
             </div>
-            <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-950/70 border border-slate-800/80 text-slate-100 text-sm font-medium shadow-sm hover:border-slate-700 transition-colors">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-lg shrink-0"></i>
-              <span><strong>创作形式全包容</strong>：<span class="text-sky-300 font-bold">纯人工原创 (No AI)</span>、<span class="text-purple-300 font-bold">AI 辅助创作 (AI-Aided)</span>、<span class="text-amber-300 font-bold">全流程 AI 生成 (AIGC)</span> 均热忱欢迎参赛！</span>
+          </div>
+
+          <!-- 创作形式全部接纳 -->
+          <div class="space-y-3 pt-2">
+            <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+              <span class="w-1.5 h-4 bg-purple-500 rounded-full"></span>
+              <span>2. 音乐与作品创作形式（三类均全面接纳）/ Accepted Formats</span>
+            </h3>
+            <div class="grid gap-3">
+              <div class="p-4 rounded-2xl bg-slate-950/80 border border-sky-900/40 space-y-1 shadow-sm">
+                <div class="text-sky-300 font-bold text-sm flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-sky-950/90 border border-sky-500/40 text-xs">类别 1</span>
+                  <span>纯人工原创 (No AI / Pure Human Creation)</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed pl-1">传统原创词曲创作、乐器实录演奏、人声演唱录制等不借助AI的纯人工音乐作品。</p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/80 border border-purple-900/40 space-y-1 shadow-sm">
+                <div class="text-purple-300 font-bold text-sm flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-purple-950/90 border border-purple-500/40 text-xs">类别 2</span>
+                  <span>人机协同 / AI 辅助创作 (AI-Aided / Hybrid Creation)</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed pl-1">人工与 AI 深度融合（如人工写词+AI编曲/旋律生成，或AI构思+人工演唱编曲等）的协同创意作品。</p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/80 border border-amber-900/40 space-y-1 shadow-sm">
+                <div class="text-amber-300 font-bold text-sm flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-amber-950/90 border border-amber-500/40 text-xs">类别 3</span>
+                  <span>全流程 AI 生成 (AIGC / Full AI Generation)</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed pl-1">借助 Suno、Udio、ChatGPT 等前沿 AI 模型完成词、曲、编、唱或 MV 的全流程端到端生成作品。</p>
+              </div>
             </div>
-            <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-slate-950/70 border border-slate-800/80 text-slate-100 text-sm font-medium shadow-sm hover:border-slate-700 transition-colors">
-              <i class="fa-solid fa-circle-check text-emerald-400 text-lg shrink-0"></i>
-              <span><strong>参赛方式自由</strong>：个人独立参赛 或 团队协同创作参赛均可</span>
-            </div>
+            <p class="text-xs text-slate-400 bg-slate-950/40 p-3 rounded-xl border border-slate-800/60 leading-relaxed">
+              ⚖️ <strong class="text-slate-200">公平评审原则</strong>：三种创作形式同台竞技、分类考核与综合评审，注重作品的艺术感染力、故事共鸣与创意表现。
+            </p>
           </div>
         </section>
 
@@ -129,7 +169,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               参赛类别 (八大创作方向)
             </h2>
           </div>
-          <p class="text-xs text-slate-300">大赛共设八大创作类别，鼓励跨类别融合AI创作（如Suno, Udio, ChatGPT等）：</p>
+          <p class="text-xs text-slate-300">大赛共设八大创作类别，鼓励跨类别融合创作（涵盖纯人工、AI辅助及AIGC作品）：</p>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-1">
             <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">诗词创作</div>
             <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">歌词创作</div>
