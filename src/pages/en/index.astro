@@ -159,26 +159,174 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
         </section>
 
-        <!-- Categories -->
-        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm">
+        <!-- Categories & Detailed Explanations -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl backdrop-blur-sm">
           <div class="flex items-center gap-x-3">
             <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 shrink-0 shadow-sm">
               <i class="fa-solid fa-music text-lg"></i>
             </div>
-            <h2 class="text-xl md:text-2xl font-bold text-white">
-              Categories (8 Creative Directions)
-            </h2>
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold text-white">
+                Contest Categories & Disciplines (8 Tracks)
+              </h2>
+              <p class="text-xs text-slate-300 mt-0.5">Welcoming Pure Human, AI-Assisted, and Full AIGC submissions across single or cross-disciplinary entries:</p>
+            </div>
           </div>
-          <p class="text-xs text-slate-300">Creators are encouraged to blend human artistry and AI tools across 8 categories:</p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-1">
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Poetry Writing</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Lyrics Writing</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Composition</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Arranging</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Vocals</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">A Cappella</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Instrumental</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">Music Video / MV</div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            
+            <!-- 1. Poetry Writing -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-sky-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-sky-950/80 border border-sky-500/30 flex items-center justify-center text-xs">01</span>
+                  <span>📜 Poetry Writing / 诗词创作</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Literature & Verse</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Classical regulated verse (Lüshi/Jueju), ancient poetry, modern lyrical poetry, and prose poetry capturing diaspora life, reflections, and emotions.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Seven-character classical verse themed on studying in North America or nostalgia.</div>
+                <div>• Modern free verse crafted with AI LLM rhyming assistance exploring cross-cultural identity.</div>
+              </div>
+            </div>
+
+            <!-- 2. Lyrics Writing -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-purple-950/80 border border-purple-500/30 flex items-center justify-center text-xs">02</span>
+                  <span>✍️ Lyrics Writing / 歌词创作</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Song Lyrics & Story</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Complete lyrics across Pop, Chinese Style (Guofeng), Rock, Folk, R&B, Rap, etc., emphasizing metric cadence, chorus hooks, and resonant storytelling.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Bilingual narrative lyrics chronicling immigrant journeys and generational memories.</div>
+                <div>• Poetic Chinese Guofeng pop lyrics blending Eastern imagery with North American landscapes.</div>
+              </div>
+            </div>
+
+            <!-- 3. Composition -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-indigo-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-indigo-950/80 border border-indigo-500/30 flex items-center justify-center text-xs">03</span>
+                  <span>🎼 Composition / 曲谱作曲</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Melody & Harmony</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Writing original melodic motifs, chord progressions, and full sheet music. Submissions accepted as numbered musical notation, staff notation, MIDI, or audio demos.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Touching melody combining traditional pentatonic scales with contemporary jazz harmonies.</div>
+                <div>• Catchy pop hook developed from AI-generated melodic seeds and refined by human composers.</div>
+              </div>
+            </div>
+
+            <!-- 4. Arranging & Production -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-amber-950/80 border border-amber-500/30 flex items-center justify-center text-xs">04</span>
+                  <span>🎛️ Arranging & Production / 编曲制作</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Instrumentation & Mix</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Orchestration, sound design, rhythm programming, and mixing across Electronic, Symphonic, Rock, Lo-Fi, and Fusion styles.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• East-meets-West arrangement fusing traditional instruments (Guzheng, Erhu) with Future Bass EDM.</div>
+                <div>• AI stems split and remastered with professional DAW layering and hybrid audio engineering.</div>
+              </div>
+            </div>
+
+            <!-- 5. Vocals -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-xs">05</span>
+                  <span>🎤 Vocals / 人声演唱</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Vocal Performance</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Studio vocal recordings, solos, duets, or choirs; also accepts AI voice cloning, virtual singer synthesis (ACE Studio/Vocaloid), and human-AI duets.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Soulful acoustic lead vocal performance recorded live in studio.</div>
+                <div>• Human live lead vocal soaring over epic AI-generated choir harmonizations.</div>
+              </div>
+            </div>
+
+            <!-- 6. A Cappella -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-teal-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-teal-950/80 border border-teal-500/30 flex items-center justify-center text-xs">06</span>
+                  <span>🎶 A Cappella / 清唱</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Pure Voice Art</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Music composed entirely of human vocal tracks without conventional instruments, including multi-part vocal ensembles, solo a cappella, and vocal percussion (Beatbox).
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Multi-harmony vocal arrangement of classic university anthems or original lyrical ballads.</div>
+                <div>• Innovative a cappella combining human beatbox rhythms with layered vocal synth emulations.</div>
+              </div>
+            </div>
+
+            <!-- 7. Instrumental -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-rose-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-rose-950/80 border border-rose-500/30 flex items-center justify-center text-xs">07</span>
+                  <span>🎻 Instrumental / 器乐演奏</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Instrument Solo & Ensemble</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Solo, ensemble, chamber, or concerto performances on Western or Chinese instruments (Piano, Guitar, Violin, Guzheng, Pipa, Erhu, etc.) and synthesizers.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Piano and Erhu cross-cultural instrumental dialogue piece.</div>
+                <div>• Original acoustic fingerstyle guitar solo or fully live-recorded string quartet.</div>
+              </div>
+            </div>
+
+            <!-- 8. Music Video / MV -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-yellow-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-yellow-950/80 border border-yellow-500/30 flex items-center justify-center text-xs">08</span>
+                  <span>🎬 Music Video (MV) / 音乐视频</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">Audio-Visual Art</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>Scope</strong>: Comprehensive audiovisual artworks combining music with live-action cinematography, AI video generation (Runway, Kling, Midjourney, Sora), or 3D animations.
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> Creative Examples:</div>
+                <div>• Epic conceptual MV depicting "Eastern Sci-Fi & Diaspora Legends" generated with AI visual models.</div>
+                <div>• Documentary-style live-action video capturing the daily life, warmth, and stories of North American Chinese families.</div>
+              </div>
+            </div>
+
           </div>
         </section>
 

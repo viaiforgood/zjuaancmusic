@@ -169,37 +169,61 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="诗词创作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">📜 Poetry Writing</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="诗词创作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">📜 Poetry Writing / 诗词创作</div>
+                <div class="text-[11px] text-slate-400">Classical verse, ancient & modern lyrical poetry</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="歌词创作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">✍️ Lyrics Writing</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="歌词创作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">✍️ Lyrics Writing / 歌词创作</div>
+                <div class="text-[11px] text-slate-400">Pop, Guofeng, Folk, Rap song lyrics & stories</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="曲谱作曲" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">🎼 Composition</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="曲谱作曲" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">🎼 Composition / 曲谱作曲</div>
+                <div class="text-[11px] text-slate-400">Melodic motifs, chords, sheet music, audio demo</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="编曲制作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">🎛️ Music Arranging</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="编曲制作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">🎛️ Arranging & Production / 编曲制作</div>
+                <div class="text-[11px] text-slate-400">Instrumentation, sound design, rhythm & mix</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="人声演唱" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">🎤 Vocal Performance</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="人声演唱" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">🎤 Vocal Performance / 人声演唱</div>
+                <div class="text-[11px] text-slate-400">Live human vocals, AI voice synthesis & duets</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="清唱 / A Cappella" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">🎶 A Cappella</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="清唱 / A Cappella" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">🎶 A Cappella / 清唱</div>
+                <div class="text-[11px] text-slate-400">Pure vocal ensemble, beatbox, unassisted singing</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="器乐演奏" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">🎻 Instrumental Performance</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="器乐演奏" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">🎻 Instrumental / 器乐演奏</div>
+                <div class="text-[11px] text-slate-400">Solo & ensemble on Western/Chinese instruments</div>
+              </div>
             </label>
-            <label class="flex items-center gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
-              <input type="checkbox" name="categories" value="音乐视频 / MV 制作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4" />
-              <span class="text-sm font-semibold text-slate-200">🎬 Music Video (MV)</span>
+            <label class="flex items-start gap-3 p-3.5 bg-slate-950/80 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="checkbox" name="categories" value="音乐视频 / MV 制作" class="rounded text-blue-500 bg-slate-900 border-slate-700 w-4 h-4 mt-1 shrink-0" />
+              <div>
+                <div class="text-sm font-semibold text-slate-100">🎬 Music Video (MV) / 音乐视频</div>
+                <div class="text-[11px] text-slate-400">Cinematography, AI video generation & animation</div>
+              </div>
             </label>
           </div>
         </div>

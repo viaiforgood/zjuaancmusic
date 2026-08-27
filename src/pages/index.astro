@@ -159,26 +159,174 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </section>
 
-        <!-- 参赛类别 -->
-        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-4 shadow-xl backdrop-blur-sm">
+        <!-- 参赛类别与详细说明 -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 shadow-xl backdrop-blur-sm">
           <div class="flex items-center gap-x-3">
             <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 shrink-0 shadow-sm">
               <i class="fa-solid fa-music text-lg"></i>
             </div>
-            <h2 class="text-xl md:text-2xl font-bold text-white">
-              参赛类别 (八大创作方向)
-            </h2>
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold text-white">
+                参赛类别与创作方向 (八大创作赛道)
+              </h2>
+              <p class="text-xs text-slate-300 mt-0.5">涵盖纯人工、人机协同与全流程AI创作，可单项或跨界申报：</p>
+            </div>
           </div>
-          <p class="text-xs text-slate-300">大赛共设八大创作类别，鼓励跨类别融合创作（涵盖纯人工、AI辅助及AIGC作品）：</p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center pt-1">
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">诗词创作</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">歌词创作</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">曲谱作曲</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">编曲制作</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">人声演唱</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">清唱 / A Cappella</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">器乐演奏</div>
-            <div class="bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-sm font-semibold text-slate-100 shadow-sm hover:border-blue-500/50 hover:text-blue-300 transition-colors">音乐视频 / MV 制作</div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            
+            <!-- 1. 诗词创作 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-sky-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-sky-950/80 border border-sky-500/30 flex items-center justify-center text-xs">01</span>
+                  <span>📜 诗词创作 / Poetry</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">文学与格律</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：涵盖律诗、绝句、古体诗、现代抒情诗、散文诗等体裁。将华人情怀、北美生活感悟或科技哲思熔铸为优美诗篇。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 以北美秋日异乡求学或思乡为主题创作的七言律诗。</div>
+                <div>• 运用 AI 大模型辅助格律校对与修辞、表达跨文化感悟的现代新诗。</div>
+              </div>
+            </div>
+
+            <!-- 2. 歌词创作 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-purple-950/80 border border-purple-500/30 flex items-center justify-center text-xs">02</span>
+                  <span>✍️ 歌词创作 / Lyrics</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">文本与叙事</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：适用于流行、古风、摇滚、民谣、说唱等各流派的完整歌词。注重音节韵律、段落起承转合与叙事感染力。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 描绘华人跨洋打拼历程与家庭温情的中英双语叙事歌词。</div>
+                <div>• 融合西湖烟雨与北美红枫意象创作的中国风流行歌词。</div>
+              </div>
+            </div>
+
+            <!-- 3. 曲谱作曲 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-indigo-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-indigo-950/80 border border-indigo-500/30 flex items-center justify-center text-xs">03</span>
+                  <span>🎼 曲谱作曲 / Composition</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">旋律与和声</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：创作主旋律、核心音乐动机或完整曲谱。提交形式可为简谱、五线谱、MIDI 音频试听或主旋律录音 Demo。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 融合东方五声调式与现代流行爵士和弦的动人主旋律。</div>
+                <div>• 借助 AI 旋律生成工具获取动机灵感、经人工精细调整创作的主题曲。</div>
+              </div>
+            </div>
+
+            <!-- 4. 编曲制作 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-amber-950/80 border border-amber-500/30 flex items-center justify-center text-xs">04</span>
+                  <span>🎛️ 编曲制作 / Arranging</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">配器与制作</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：针对旋律进行乐器配器、声音设计、节奏律动编排及混音。支持电子、管弦交响、摇滚、Lo-Fi 等多元风格。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 将中国传统民乐（古筝、二胡、笛箫）与欧美电子律动（Future Bass）融合的编曲。</div>
+                <div>• 利用 AI 分轨工具结合专业 DAW 进行高品质母带重构与混音。</div>
+              </div>
+            </div>
+
+            <!-- 5. 人声演唱 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-emerald-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-xs">05</span>
+                  <span>🎤 人声演唱 / Vocal</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">声乐演绎</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：真人歌手原声主唱、重唱或合唱录制；亦支持 AI 音色建模克隆、虚拟歌手调教或人机双重唱。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 歌手深情投入的录音室纯真人原声主唱演绎。</div>
+                <div>• 真人原声领唱与 AI 生成的宏大和声伴唱交织的创新作品。</div>
+              </div>
+            </div>
+
+            <!-- 6. 清唱 / 阿卡贝拉 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-teal-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-teal-950/80 border border-teal-500/30 flex items-center justify-center text-xs">06</span>
+                  <span>🎶 清唱 / A Cappella</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">纯人声艺术</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：不使用任何常规乐器伴奏，完全由人声构成多声部合唱、阿卡贝拉、无伴奏独唱或人声打击乐（Beatbox）。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 纯人声多声部合唱演绎改编经典的校园曲目或原创抒情曲。</div>
+                <div>• 结合人声打击乐（Beatbox）与人声模拟器乐声部的阿卡贝拉作品。</div>
+              </div>
+            </div>
+
+            <!-- 7. 器乐演奏 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-rose-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-rose-950/80 border border-rose-500/30 flex items-center justify-center text-xs">07</span>
+                  <span>🎻 器乐演奏 / Instrumental</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">乐器与独奏</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：中西方传统乐器（钢琴、吉他、小提琴、古筝、琵琶、二胡等）与现代合成器的独奏、重奏、室内乐或协奏曲。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 钢琴与二胡跨界对话的叙事性纯音乐作品。</div>
+                <div>• 原创吉他指弹（Fingerstyle）独奏或全人工实录管弦重奏。</div>
+              </div>
+            </div>
+
+            <!-- 8. 音乐视频 / MV 制作 -->
+            <div class="bg-slate-950/80 border border-slate-800/90 rounded-2xl p-4 space-y-2.5 hover:border-purple-500/40 transition-colors shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-yellow-300 font-bold text-sm">
+                  <span class="w-7 h-7 rounded-lg bg-yellow-950/80 border border-yellow-500/30 flex items-center justify-center text-xs">08</span>
+                  <span>🎬 音乐视频 / MV 制作</span>
+                </div>
+                <span class="text-[11px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">视听综合艺术</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                <strong>说明</strong>：音乐与视觉画面深度结合的视听综合作品。可采用真人实景拍摄、AI 视觉生成或三维动画混合剪辑。
+              </p>
+              <div class="bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-1">
+                <div class="text-slate-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-lightbulb text-amber-400 text-[10px]"></i> 创作示例：</div>
+                <div>• 运用 AI 视觉工具（如 Runway / Kling / Midjourney）打造的“东方科幻与华人传奇”概念 MV。</div>
+                <div>• 真实记录北美华人生活光影、亲情故事的实景拍摄剪辑作品。</div>
+              </div>
+            </div>
+
           </div>
         </section>
 
