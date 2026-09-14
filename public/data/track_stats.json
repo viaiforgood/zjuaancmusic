@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-09-05T03:51:02.473893+00:00",
+  "updatedTimes": {
+    "edt": "Sep 04, 2026, 11:51 PM EDT",
+    "pdt": "Sep 04, 2026, 08:51 PM PDT",
+    "beijing": "2026-09-05 11:51 北京/台北 (UTC+8)",
+    "london": "Sep 05, 2026, 04:51 AM BST",
+    "utc": "Sep 05, 2026, 03:51 UTC"
+  },
+  "total": 6,
+  "tracks": {
+    "north_america": {
+      "name": "北美主赛道",
+      "name_en": "North America Track",
+      "count": 6,
+      "cap": null,
+      "status": "OPEN"
+    },
+    "sinophone": {
+      "name": "华语世界赛道",
+      "name_en": "Sinophone Track",
+      "count": 0,
+      "cap": 150,
+      "remaining": 150,
+      "isWaitlist": false,
+      "status": "OPEN"
+    },
+    "international_open": {
+      "name": "国际开放赛道",
+      "name_en": "International Open Track",
+      "count": 0,
+      "cap": 80,
+      "remaining": 80,
+      "isWaitlist": false,
+      "status": "OPEN"
+    }
+  },
+  "specials": {
+    "zju_tribute": 2
+  },
+  "creation_modes": {
+    "human": 1,
+    "hybrid": 3,
+    "aigc": 2,
+    "unspecified": 0
+  }
+}

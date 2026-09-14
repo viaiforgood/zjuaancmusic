@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout lang="fr" title="Formulaire d'Inscription · 1er Concours Nord-Américain de Création Musicale Chinoise avec IA 2026–2027" description="Formulaire officiel d'inscription pour le 1er Concours Nord-Américain de Création Musicale Chinoise avec IA." path="/fr/register">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-8">
+    
+    <!-- Title & Intro Header -->
+    <header class="text-center space-y-3">
+      <div class="inline-flex items-center gap-x-2 bg-blue-950/40 text-blue-400 px-4 py-1.5 rounded-full text-xs font-semibold border border-blue-900/30">
+        <i class="fa-solid fa-music"></i>
+        <span>1er Concours Nord-Américain de Création Musicale Chinoise avec IA · Inscription Officielle</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+        Formulaire d'Inscription
+      </h1>
+      <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+        Composer avec l'IA · Œuvres originales inédites uniquement (Reprises / Covers strictement interdites)
+      </p>
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <a href="https://tally.so/r/aQqXGW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 bg-blue-950/50 hover:bg-blue-950/80 px-3.5 py-1.5 rounded-lg border border-blue-900/50 transition-colors">
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <span>Ouvrir en plein écran</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Embedded Tally Form Container -->
+    <div class="bg-white rounded-3xl p-2 sm:p-6 shadow-2xl overflow-hidden min-h-[700px] border border-slate-700/50">
+      <iframe 
+        data-tally-src="https://tally.so/embed/aQqXGW?alignLeft=1&dynamicHeight=1" 
+        loading="lazy" 
+        width="100%" 
+        height="1200" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0" 
+        title="Formulaire d'Inscription"
+        class="w-full rounded-2xl bg-white">
+      </iframe>
+    </div>
+
+    <!-- Official Help Info -->
+    <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="space-y-1 text-center sm:text-left">
+        <div class="font-bold text-slate-200 text-sm">💡 Questions ou demandes d'informations ?</div>
+        <p>Contactez le comité d'organisation : <a href="mailto:info@chinesemusic.ai" class="text-blue-400 font-semibold hover:underline">info@chinesemusic.ai</a></p>
+      </div>
+      <a href="/fr" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition-colors shrink-0">
+        Retour à l'accueil
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Tally Official Embed Script -->
+  <script src="https://tally.so/widgets/embed.js"></script>
+</BaseLayout>

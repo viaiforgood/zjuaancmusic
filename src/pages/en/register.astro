@@ -25,6 +25,105 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
     </header>
 
+    <!-- Track Selection & Cap Notice with Hourly Count Tracking -->
+    <div class="bg-gradient-to-r from-blue-950/60 via-purple-950/60 to-slate-900/80 border border-blue-800/60 rounded-2xl p-4 sm:p-5 text-xs text-slate-200 space-y-3">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <div class="flex items-center gap-2 font-bold text-sm text-amber-300">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Track Selection & Registration Dashboard</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-800/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span id="stat-sync-label">Updated Hourly</span>
+        </div>
+      </div>
+
+      <!-- Timezone Indicators Bar -->
+      <div class="flex items-center justify-between flex-wrap gap-2 text-[11px] text-slate-400 pt-1 pb-0.5 border-t border-slate-800/60">
+        <div class="flex items-center gap-2 flex-wrap" id="stat-timezones">
+          <span class="text-slate-400 font-semibold"><i class="fa-regular fa-clock text-blue-400"></i> Snapshot Time:</span>
+          <span class="text-slate-200 font-mono" id="stat-time-edt">-- EDT</span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-200 font-mono" id="stat-time-pdt">-- PDT</span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-200 font-mono" id="stat-time-cst">-- UTC+8</span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-400 font-mono" id="stat-time-utc">-- UTC</span>
+        </div>
+        <span class="text-[10px] text-slate-500">Syncs every hour</span>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-3 pt-1">
+        <!-- North America Track Card -->
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-blue-900/50 space-y-2 flex flex-col justify-between shadow-sm">
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-300 text-xs">1. North America Track</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/60">No Cap</span>
+            </div>
+            <div class="text-[11px] text-slate-400 leading-relaxed">Primary residence or study in US, Canada, or Mexico; enters 8 regional hubs, alliance semifinals & finals.</div>
+          </div>
+          <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">Status:</span>
+            <span class="font-semibold text-emerald-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Open for Entries · Plenty of Spots</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Sinophone Track Card (Cap 150) -->
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-purple-900/50 space-y-2 flex flex-col justify-between shadow-sm">
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-300 text-xs">2. Sinophone Track</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800/60" id="stat-sino-badge">Cap: 150</span>
+            </div>
+            <div class="text-[11px] text-slate-400 leading-relaxed">Mainland China, HK, Macao, Taiwan & Asian Chinese communities; pilot cap 150, overflow enters waitlist.</div>
+          </div>
+          <div class="pt-2 border-t border-slate-800/80 space-y-1.5">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-slate-400">Status:</span>
+              <span class="font-semibold text-emerald-400 flex items-center gap-1.5" id="stat-sino-status">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Spots Available · Open</span>
+              </span>
+            </div>
+            <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
+              <div id="stat-sino-bar" class="bg-gradient-to-r from-purple-500 to-indigo-400 h-1.5 rounded-full transition-all duration-500" style="width: 25%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- International Open Track Card (Cap 80) -->
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-emerald-900/50 space-y-2 flex flex-col justify-between shadow-sm">
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-emerald-300 text-xs">3. International Open</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/60" id="stat-intl-badge">Cap: 80</span>
+            </div>
+            <div class="text-[11px] text-slate-400 leading-relaxed">Creators residing outside North America & Sinophone regions; pilot cap 80, overflow enters waitlist.</div>
+          </div>
+          <div class="pt-2 border-t border-slate-800/80 space-y-1.5">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-slate-400">Status:</span>
+              <span class="font-semibold text-emerald-400 flex items-center gap-1.5" id="stat-intl-status">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Spots Available · Open</span>
+              </span>
+            </div>
+            <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
+              <div id="stat-intl-bar" class="bg-gradient-to-r from-emerald-500 to-teal-400 h-1.5 rounded-full transition-all duration-500" style="width: 25%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-[11px] text-slate-400 pt-1 border-t border-slate-800/60">
+        ※ Eligibility follows author / team lead's primary residence. One track per entry. Unified deadline extended: <strong>Sep 28, 2026 (Lunar Aug 18) at 11:59 PM EDT</strong>. Original works only; no covers.
+      </p>
+    </div>
+
     <!-- Embedded Tally Form Container (Clean High-Contrast Card matching independent page) -->
     <div class="bg-white rounded-3xl p-2 sm:p-6 shadow-2xl overflow-hidden min-h-[700px] border border-slate-700/50">
       <iframe 
@@ -35,7 +134,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         frameborder="0" 
         marginheight="0" 
         marginwidth="0" 
-        title="1st North American Chinese AI Music Contest 2026–2027 Registration Form"
+        title="1st North American AI Chinese Music Contest 2026–2027 Registration Form"
         class="w-full rounded-2xl bg-white">
       </iframe>
     </div>
@@ -43,8 +142,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <!-- Official Help Info -->
     <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
       <div class="space-y-1 text-center sm:text-left">
-        <div class="font-bold text-slate-200 text-sm">💡 Questions or need assistance?</div>
-        <p>Contact the committee: <a href="mailto:info@chinesemusic.ai" class="text-blue-400 hover:underline">info@chinesemusic.ai</a> / <a href="mailto:michael@chinesemusic.ai" class="text-blue-400 hover:underline">michael@chinesemusic.ai</a></p>
+        <div class="font-bold text-slate-200 text-sm">💡 Questions or submitting entries via email?</div>
+        <p>Contact the committee: <a href="mailto:submit@chinesemusic.ai" class="text-blue-400 font-semibold hover:underline">submit@chinesemusic.ai</a></p>
       </div>
       <a href="/en" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition-colors shrink-0">
         Back Home
@@ -55,4 +154,108 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   <!-- Tally Official Embed Script -->
   <script src="https://tally.so/widgets/embed.js"></script>
+
+  <!-- Real-Time / Dynamic Track Stats Fetcher -->
+  <script is:inline>
+    async function updateTrackStats() {
+      try {
+        const res = await fetch('/api/stats');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data || !data.tracks) return;
+
+        const sino = data.tracks.sinophone;
+        const intl = data.tracks.international_open;
+
+        // Sinophone Track (Cap 150): Hide small raw counts, only show urgency count when approaching cap (>=80% or <=30 spots)
+        const sinoStatusEl = document.getElementById('stat-sino-status');
+        const sinoBarEl = document.getElementById('stat-sino-bar');
+        const sinoBadgeEl = document.getElementById('stat-sino-badge');
+        if (sino && sinoStatusEl) {
+          const cap = sino.cap || 150;
+          const count = sino.count || 0;
+          const remaining = Math.max(0, cap - count);
+
+          if (sino.isWaitlist || count >= cap) {
+            sinoStatusEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span><span class="text-rose-300 font-bold">Cap Reached · Waitlist Active</span>';
+            if (sinoBadgeEl) {
+              sinoBadgeEl.textContent = 'Waitlist Active';
+              sinoBadgeEl.className = 'text-[10px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800/60 font-bold';
+            }
+            if (sinoBarEl) sinoBarEl.style.width = '100%';
+          } else if (remaining <= 30 || count >= cap * 0.8) {
+            sinoStatusEl.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span><span class="text-amber-300 font-bold">Fast Filling · Only ${remaining} Left</span>`;
+            if (sinoBadgeEl) {
+              sinoBadgeEl.textContent = `Only ${remaining} Left`;
+              sinoBadgeEl.className = 'text-[10px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/60 font-bold';
+            }
+            if (sinoBarEl) sinoBarEl.style.width = `${Math.min(100, Math.round((count / cap) * 100))}%`;
+          } else {
+            // Far from limit: show positive abundance status without revealing small raw number
+            sinoStatusEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-emerald-400 font-semibold">Spots Available · Open</span>';
+            if (sinoBadgeEl) {
+              sinoBadgeEl.textContent = 'Cap: 150';
+              sinoBadgeEl.className = 'text-[10px] px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800/60';
+            }
+            if (sinoBarEl) sinoBarEl.style.width = '25%';
+          }
+        }
+
+        // International Open Track (Cap 80): Hide small raw counts, only show urgency count when approaching cap (>=80% or <=20 spots)
+        const intlStatusEl = document.getElementById('stat-intl-status');
+        const intlBarEl = document.getElementById('stat-intl-bar');
+        const intlBadgeEl = document.getElementById('stat-intl-badge');
+        if (intl && intlStatusEl) {
+          const cap = intl.cap || 80;
+          const count = intl.count || 0;
+          const remaining = Math.max(0, cap - count);
+
+          if (intl.isWaitlist || count >= cap) {
+            intlStatusEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span><span class="text-rose-300 font-bold">Cap Reached · Waitlist Active</span>';
+            if (intlBadgeEl) {
+              intlBadgeEl.textContent = 'Waitlist Active';
+              intlBadgeEl.className = 'text-[10px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800/60 font-bold';
+            }
+            if (intlBarEl) intlBarEl.style.width = '100%';
+          } else if (remaining <= 20 || count >= cap * 0.8) {
+            intlStatusEl.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span><span class="text-amber-300 font-bold">Fast Filling · Only ${remaining} Left</span>`;
+            if (intlBadgeEl) {
+              intlBadgeEl.textContent = `Only ${remaining} Left`;
+              intlBadgeEl.className = 'text-[10px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/60 font-bold';
+            }
+            if (intlBarEl) intlBarEl.style.width = `${Math.min(100, Math.round((count / cap) * 100))}%`;
+          } else {
+            // Far from limit: show positive abundance status without revealing small raw number
+            intlStatusEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-emerald-400 font-semibold">Spots Available · Open</span>';
+            if (intlBadgeEl) {
+              intlBadgeEl.textContent = 'Cap: 80';
+              intlBadgeEl.className = 'text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/60';
+            }
+            if (intlBarEl) intlBarEl.style.width = '25%';
+          }
+        }
+
+        // Update Multi-Timezone Snapshot Timestamps
+        if (data.updatedTimes) {
+          const edtEl = document.getElementById('stat-time-edt');
+          const pdtEl = document.getElementById('stat-time-pdt');
+          const cstEl = document.getElementById('stat-time-cst');
+          const utcEl = document.getElementById('stat-time-utc');
+          if (edtEl && data.updatedTimes.edt) edtEl.textContent = data.updatedTimes.edt;
+          if (pdtEl && data.updatedTimes.pdt) pdtEl.textContent = data.updatedTimes.pdt;
+          if (cstEl && data.updatedTimes.beijing) cstEl.textContent = data.updatedTimes.beijing;
+          if (utcEl && data.updatedTimes.utc) utcEl.textContent = data.updatedTimes.utc;
+        }
+      } catch (e) {
+        // Silent fallback
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateTrackStats);
+    } else {
+      updateTrackStats();
+    }
+    // Update every hour (3600,000 ms)
+    setInterval(updateTrackStats, 3600000);
+  </script>
 </BaseLayout>

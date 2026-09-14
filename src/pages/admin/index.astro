@@ -100,15 +100,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div class="flex flex-wrap items-center gap-3">
           <select id="filter-hub" onchange="applyFilters()" class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
-            <option value="">全部赛区 / All Hubs</option>
-            <option value="NC">北卡 (NC)</option>
-            <option value="DC">华府 (DC)</option>
-            <option value="TN">田纳西 (TN)</option>
-            <option value="FL">佛州 (FL)</option>
-            <option value="PA">宾州 (PA)</option>
-            <option value="TX">德州 (TX)</option>
-            <option value="CA">加州 (CA)</option>
-            <option value="WA">华州 (WA)</option>
+            <option value="">全部赛道/赛区 / All Tracks & Hubs</option>
+            <optgroup label="北美主赛道分赛区 / NA Hubs">
+              <option value="北卡">北卡 (NC)</option>
+              <option value="华府">华府 (DC)</option>
+              <option value="田纳西">田纳西 (TN)</option>
+              <option value="佛州">佛州 (FL)</option>
+              <option value="宾州">宾州 (PA)</option>
+              <option value="德州">德州 (TX)</option>
+              <option value="加州">加州 (CA)</option>
+              <option value="华州">华州 (WA)</option>
+              <option value="北美其他">北美其他地区 / Other NA</option>
+            </optgroup>
+            <optgroup label="试点赛道 / Pilot Tracks">
+              <option value="华语世界">华语世界赛道 (Sinophone Track · 限额150)</option>
+              <option value="国际开放">国际开放赛道 (International Open · 限额80)</option>
+            </optgroup>
           </select>
 
           <select id="filter-mode" onchange="applyFilters()" class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
@@ -235,8 +242,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       document.getElementById('metric-ai').innerText = `${aiPercent}%`;
       document.getElementById('metric-ai-sub').innerText = `共 ${aiCount} 件 AI 参与作品`;
 
-      const hubs = new Set(list.map(s => s.hub).filter(Boolean));
-      document.getElementById('metric-hubs').innerText = `${hubs.size} / 8`;
+      const naHubs = new Set(list.map(s => s.hub).filter(h => h && !h.includes('华语世界') && !h.includes('Sinophone') && !h.includes('国际开放') && !h.includes('International Open')));
+      document.getElementById('metric-hubs').innerText = `${naHubs.size} / 8+`;
     }
 
     function renderTable(list) {
@@ -267,7 +274,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         return `
           <tr class="hover:bg-slate-800/40 transition-colors">
             <td class="py-3 px-4">
-              <div class="font-mono text-[11px] font-bold text-blue-400">${s.refId || '--'}</div>
+              <div class="font-mono text-[11px] font-bold text-blue-400">${escapeHtml(s.refId || s.id || '--')}</div>
               <div class="text-[10px] text-slate-500 mt-0.5">${formattedDate}</div>
             </td>
             <td class="py-3 px-4">
@@ -278,7 +285,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               </div>
             </td>
             <td class="py-3 px-4">
-              <span class="font-bold text-sky-400">${escapeHtml(s.hub || '--')} 赛区</span>
+              <span class="font-bold text-sky-400">${escapeHtml(s.hub || '--')}</span>
               <div class="text-[11px] text-slate-400 mt-0.5">${escapeHtml(s.city || '--')}</div>
             </td>
             <td class="py-3 px-4">
@@ -298,7 +305,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               ${awardBadge}
             </td>
             <td class="py-3 px-4 text-center">
-              <button onclick="viewDetail('${s.refId}')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors">
+              <button onclick="viewDetail('${s.refId || s.id}')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors">
                 详情
               </button>
             </td>
@@ -309,15 +316,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     function applyFilters() {
       const q = document.getElementById('search-input').value.toLowerCase().trim();
-      const hub = document.getElementById('filter-hub').value;
+      const hub = document.getElementById('filter-hub').value.trim();
       const mode = document.getElementById('filter-mode').value;
 
       const filtered = allSubmissions.filter(s => {
         const matchQ = !q || [
-          s.name, s.english_name, s.email, s.wechat, s.work_title, s.city, s.refId
+          s.name, s.english_name, s.email, s.wechat, s.phone, s.work_title, s.city, s.refId, s.id, s.hub
         ].some(v => v && String(v).toLowerCase().includes(q));
 
-        const matchHub = !hub || s.hub === hub;
+        const matchHub = !hub || (s.hub && s.hub.toLowerCase().includes(hub.toLowerCase()));
         const matchMode = !mode || s.creation_mode === mode;
 
         return matchQ && matchHub && matchMode;
@@ -327,10 +334,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
 
     function viewDetail(refId) {
-      const item = allSubmissions.find(s => s.refId === refId);
+      const item = allSubmissions.find(s => s.refId === refId || s.id === refId);
       if (!item) return;
 
-      document.getElementById('modal-ref-id').innerText = item.refId;
+      document.getElementById('modal-ref-id').innerText = item.refId || item.id;
       document.getElementById('modal-title').innerText = item.work_title || '作品详情';
 
       const categoriesStr = Array.isArray(item.categories) ? item.categories.join(', ') : (item.categories || '--');
