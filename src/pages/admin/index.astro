@@ -292,7 +292,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               ${modeBadge}
             </td>
             <td class="py-3 px-4 max-w-xs">
-              <div class="font-semibold text-white truncate">${escapeHtml(s.work_title || '--')}</div>
+              <div class="flex items-center gap-1">
+                <span class="font-semibold text-white truncate">${escapeHtml(s.work_title || '--')}</span>
+                ${(s.total_works || 0) > 1 ? `<span class="shrink-0 px-1.5 py-0.2 rounded bg-blue-950/90 text-blue-300 border border-blue-800/60 text-[10px] font-bold">共 ${s.total_works} 首</span>` : ''}
+              </div>
               ${s.work_url ? `
                 <a href="${escapeHtml(s.work_url)}" target="_blank" rel="noopener noreferrer" class="text-[11px] text-blue-400 hover:underline flex items-center gap-1 mt-0.5 truncate">
                   <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
@@ -320,8 +323,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       const mode = document.getElementById('filter-mode').value;
 
       const filtered = allSubmissions.filter(s => {
+        const pTitles = (s.primary_works || []).map(w => w.title).join(' ');
+        const bTitles = (s.backup_works || []).map(w => w.title).join(' ');
+
         const matchQ = !q || [
-          s.name, s.english_name, s.email, s.wechat, s.phone, s.work_title, s.city, s.refId, s.id, s.hub
+          s.name, s.english_name, s.email, s.wechat, s.phone, s.work_title, pTitles, bTitles, s.city, s.refId, s.id, s.hub
         ].some(v => v && String(v).toLowerCase().includes(q));
 
         const matchHub = !hub || (s.hub && s.hub.toLowerCase().includes(hub.toLowerCase()));
@@ -342,6 +348,83 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       const categoriesStr = Array.isArray(item.categories) ? item.categories.join(', ') : (item.categories || '--');
 
+      const pWorks = (item.primary_works || []).filter(w => w.title || w.url);
+      const bWorks = (item.backup_works || []).filter(w => w.title || w.url);
+
+      let worksHtml = '';
+      if (pWorks.length === 0 && bWorks.length === 0) {
+        worksHtml = `
+          <div class="space-y-1.5">
+            <div class="font-bold text-slate-200">作品链接：</div>
+            <a href="${escapeHtml(item.work_url || '#')}" target="_blank" class="block p-3 rounded-xl bg-slate-950 border border-slate-800 text-blue-400 hover:underline font-mono text-xs break-all">
+              ${escapeHtml(item.work_url || '无链接')}
+            </a>
+          </div>
+        `;
+      } else {
+        worksHtml = `<div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-200">申报作品列表 (${item.total_works || (pWorks.length + bWorks.length)} 首)：</span>
+            <span class="text-[11px] text-slate-400 font-mono">至多 8 首主选 + 2 首备选</span>
+          </div>`;
+
+        if (pWorks.length > 0) {
+          worksHtml += `<div class="space-y-2">
+            <div class="text-[11px] font-bold text-blue-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-music"></i>
+              <span>主选作品 (${pWorks.length} 首)</span>
+            </div>`;
+          pWorks.forEach(w => {
+            worksHtml += `
+              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800/80 space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="font-semibold text-slate-100 flex items-center gap-2">
+                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800/60 font-mono font-bold">主选 ${w.index}</span>
+                    <span>${escapeHtml(w.title || '（未命名作品）')}</span>
+                  </div>
+                </div>
+                ${w.url ? `
+                  <a href="${escapeHtml(w.url)}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline text-xs font-mono break-all flex items-center gap-1.5 pt-0.5">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-500"></i>
+                    <span>${escapeHtml(w.url)}</span>
+                  </a>
+                ` : '<span class="text-slate-500 text-xs italic">无试听链接</span>'}
+              </div>
+            `;
+          });
+          worksHtml += `</div>`;
+        }
+
+        if (bWorks.length > 0) {
+          worksHtml += `<div class="space-y-2 pt-1">
+            <div class="text-[11px] font-bold text-amber-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>备选作品 (${bWorks.length} 首)</span>
+            </div>`;
+          bWorks.forEach(w => {
+            worksHtml += `
+              <div class="p-3 rounded-xl bg-slate-950 border border-amber-950/70 space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="font-semibold text-slate-100 flex items-center gap-2">
+                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/60 font-mono font-bold">备选 ${w.index}</span>
+                    <span>${escapeHtml(w.title || '（未命名作品）')}</span>
+                  </div>
+                </div>
+                ${w.url ? `
+                  <a href="${escapeHtml(w.url)}" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline text-xs font-mono break-all flex items-center gap-1.5 pt-0.5">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-amber-600"></i>
+                    <span>${escapeHtml(w.url)}</span>
+                  </a>
+                ` : '<span class="text-slate-500 text-xs italic">无试听链接</span>'}
+              </div>
+            `;
+          });
+          worksHtml += `</div>`;
+        }
+
+        worksHtml += `</div>`;
+      }
+
       document.getElementById('modal-body').innerHTML = `
         <div class="grid grid-cols-2 gap-3 bg-slate-950 p-4 rounded-xl border border-slate-800">
           <div><span class="text-slate-500">选手姓名：</span> <strong class="text-slate-100">${escapeHtml(item.name || '')}</strong> ${item.english_name ? `(${escapeHtml(item.english_name)})` : ''}</div>
@@ -354,15 +437,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div><span class="text-slate-500">母校特别奖：</span> <span class="text-amber-400 font-bold">${item.is_alma_mater_award === 'yes' ? '是 (献礼130周年)' : '否'}</span></div>
         </div>
 
-        <div class="space-y-1.5">
-          <div class="font-bold text-slate-200">作品链接：</div>
-          <a href="${escapeHtml(item.work_url || '#')}" target="_blank" class="block p-3 rounded-xl bg-slate-950 border border-slate-800 text-blue-400 hover:underline font-mono text-xs break-all">
-            ${escapeHtml(item.work_url || '无链接')}
-          </a>
-        </div>
+        ${worksHtml}
 
         <div class="space-y-1.5">
-          <div class="font-bold text-slate-200">申报赛道类别：</div>
+          <div class="font-bold text-slate-200">申报赛道专业方向：</div>
           <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300">${escapeHtml(categoriesStr)}</div>
         </div>
 

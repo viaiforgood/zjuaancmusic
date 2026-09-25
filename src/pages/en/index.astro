@@ -430,15 +430,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               </div>
             </div>
 
-            <!-- Doc 5: Bilingual Print Flyer -->
-            <div class="sm:col-span-2 p-5 rounded-2xl bg-gradient-to-r from-amber-950/40 via-slate-950 to-blue-950/40 border border-amber-500/40 hover:border-amber-400/60 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
-              <div class="space-y-1.5 flex-1">
+
+            <!-- Doc 5: Official Poster & Handout -->
+            <div class="sm:col-span-2 p-6 rounded-2xl bg-gradient-to-r from-orange-950/60 via-amber-950/30 to-yellow-950/60 border-2 border-amber-500/60 hover:border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 group relative overflow-hidden">
+              <div class="absolute -right-8 -top-8 w-32 h-32 bg-amber-500/20 rounded-full blur-2xl pointer-events-none"></div>
+              <div class="space-y-2 flex-1 relative z-10">
                 <div class="flex items-center gap-2 flex-wrap">
-                  <span class="px-2 py-0.5 rounded bg-amber-950 border border-amber-500/40 text-amber-300 font-bold text-xs">
-                    <i class="fa-solid fa-file-pdf mr-1"></i> Printable Event Flyer
+                  <span class="px-2.5 py-1 rounded bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-xs shadow-md">
+                    <i class="fa-solid fa-star mr-1 text-yellow-200"></i> 高清宣发物料 (Promo Assets)
                   </span>
-                  <span class="text-xs text-slate-400 font-mono">1.7 MB · US Letter Vector PDF</span>
+                  <span class="text-xs text-amber-200/80 font-mono">Bilingual (中英双语) · Print-Ready PDF</span>
                 </div>
+                <h3 class="text-base font-bold text-white group-hover:text-amber-300 transition-colors">
+                  大赛官方海报 (Poster) & 宣发单页 (Handout)
+                </h3>
+                <p class="text-[13px] text-amber-100/70 leading-relaxed">
+                  专为线下展位派发与高清彩印设计的官方海报与双语单页，包含完整的大赛详情、赛道分类与报名入口。
+                </p>
+              </div>
+              <div class="pt-2 sm:pt-0 shrink-0 w-full sm:w-auto flex flex-col sm:flex-row gap-3 relative z-10">
+                <a href="/docs/ChineseMusic_AI_Official_Poster_Bilingual.pdf" target="_blank" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs text-center transition-all shadow-lg hover:shadow-orange-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-image"></i> 下载官方海报 (Poster)
+                </a>
+                <a href="/docs/ChineseMusic_AI_Bilingual_Flyer.pdf" target="_blank" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs text-center transition-all shadow-lg hover:shadow-amber-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-file-lines"></i> 下载双面宣发单页 (2-Sided Handout)
+                </a>
+              </div>
+            </div>
+
+          </div>
                 <h3 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">
                   Official Bilingual Event Flyer (Print-Ready)
                 </h3>
@@ -645,7 +665,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               </p>
             </div>
 
-            <div class="p-4 rounded-2xl bg-slate-950/60 border border-rose-300 text-sm flex items-center gap-2">
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-rose-300 text-sm space-y-2">
               <div class="font-bold text-rose-300 text-sm flex items-center gap-2">
                 <i class="fa-solid fa-users text-xs"></i> 6. A Cappella / Ensemble
               </div>
@@ -902,8 +922,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <span>WeChat QR Code Community</span>
           </h3>
           <div class="flex flex-col items-center gap-2">
-            <a href="/images/wechat_match_registration_qr.jpg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-slate-800 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/50 hover:shadow-blue-500/10">
-              <img src="/images/wechat_match_registration_qr.jpg" alt="WeChat Community QR Code" class="w-48 sm:w-52 max-w-full rounded-2xl object-contain mx-auto bg-slate-950" />
+            <a href="/images/wechat_match_registration_qr_0914.jpg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-slate-800 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/50 hover:shadow-blue-500/10">
+              <img src="/images/wechat_match_registration_qr_0914.jpg" alt="WeChat Community QR Code" class="w-48 sm:w-52 max-w-full rounded-2xl object-contain mx-auto bg-slate-950" />
               <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span class="px-3 py-1.5 rounded-full bg-slate-950/90 border border-blue-500/50 text-blue-300 text-xs font-semibold backdrop-blur-md flex items-center gap-1.5 shadow-lg">
                   <i class="fa-solid fa-magnifying-glass-plus"></i> View High-Res
