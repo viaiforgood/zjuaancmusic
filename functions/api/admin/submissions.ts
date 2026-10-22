@@ -188,6 +188,28 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       if (!data.work_title && activePrimary[0]?.title) data.work_title = activePrimary[0].title;
       if (!data.work_url && activePrimary[0]?.url) data.work_url = activePrimary[0].url;
 
+      // Smart ZJU Special Award Classification
+      const allText = [
+        data.work_concept,
+        ...primaryWorks.map(w => w.title),
+        ...backupWorks.map(w => w.title)
+      ].join(' ');
+      
+      const isCoreZju = /钱塘|之江|玉泉|紫金港|求是园|求是/i.test(allText);
+      const isBroadZju = /归航|潮向未来/i.test(allText);
+
+      if (data.is_alma_mater_award === 'yes') {
+        if (isCoreZju) {
+          data.zju_award_tier = 'core';
+        } else if (isBroadZju) {
+          data.zju_award_tier = 'broad';
+        } else {
+          data.zju_award_tier = 'general';
+        }
+      } else {
+        data.zju_award_tier = 'none';
+      }
+
       return data;
     });
 
